@@ -151,7 +151,7 @@ public final class OpenTubeRepository {
         mPending.put(channel.name, pending);
 
         mExecutor.execute(() -> {
-            final List<Entry> entries = build(OpenTubeFeed.fetchAll(channel.channelIds));
+            final List<Entry> entries = build(OpenTubeFeed.fetchAll(channel.channelIds), channel.favorites);
             if (!entries.isEmpty()) {
                 writeDisk(channel, entries);
             }
@@ -223,17 +223,21 @@ public final class OpenTubeRepository {
      * Intercala os canais do YouTube (um vídeo de cada, em ordem sorteada),
      * do mais novo para o mais antigo dentro de cada canal.
      */
-    private static List<Entry> build(List<List<OpenTubeFeed.Entry>> feeds) {
+    private static List<Entry> build(List<List<OpenTubeFeed.Entry>> feeds, java.util.Set<String> favorites) {
         List<List<OpenTubeFeed.Entry>> lists = new ArrayList<>(feeds);
         Collections.shuffle(lists);
 
+        // Fonte preferida entra com 2 vídeos por rodada; as outras com 1
+        int[] next = new int[lists.size()];
         List<Entry> result = new ArrayList<>();
         boolean added = true;
-        for (int i = 0; added && result.size() < MAX_ENTRIES; i++) {
+        while (added && result.size() < MAX_ENTRIES) {
             added = false;
-            for (List<OpenTubeFeed.Entry> list : lists) {
-                if (i < list.size() && result.size() < MAX_ENTRIES) {
-                    OpenTubeFeed.Entry item = list.get(i);
+            for (int l = 0; l < lists.size(); l++) {
+                List<OpenTubeFeed.Entry> list = lists.get(l);
+                boolean favorite = !list.isEmpty() && favorites.contains(list.get(0).channelId);
+                for (int k = 0; k < (favorite ? 2 : 1) && next[l] < list.size() && result.size() < MAX_ENTRIES; k++) {
+                    OpenTubeFeed.Entry item = list.get(next[l]++);
                     Entry entry = new Entry();
                     entry.videoId = item.videoId;
                     entry.channelId = item.channelId;

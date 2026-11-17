@@ -28,18 +28,22 @@ public final class TvChannel {
     public final int color;
     public final String[] channelIds;
     public final String[] sourceNames;
+    /** channel_id das fontes preferidas (marcadas na curadoria): entram duas vezes por rodada na programação. */
+    public final java.util.Set<String> favorites;
     /** Caminho da capa em assets/opentube (ex.: "covers/arch3.png"), ou null. */
     public final String cover;
     /** Tempo mínimo de vídeo, em minutos (0 = sem mínimo). Configurado na curadoria. */
     public final int minMinutes;
 
-    private TvChannel(String name, int color, String[] channelIds, String[] sourceNames, String cover, int minMinutes) {
+    private TvChannel(String name, int color, String[] channelIds, String[] sourceNames, String cover, int minMinutes,
+                      java.util.Set<String> favorites) {
         this.name = name;
         this.color = color;
         this.channelIds = channelIds;
         this.sourceNames = sourceNames;
         this.cover = cover;
         this.minMinutes = minMinutes;
+        this.favorites = favorites;
     }
 
     public static synchronized List<TvChannel> load(Context context) {
@@ -58,11 +62,15 @@ public final class TvChannel {
                 JSONArray sources = channel.getJSONArray("sources");
                 String[] ids = new String[sources.length()];
                 String[] names = new String[sources.length()];
+                java.util.Set<String> favorites = new java.util.HashSet<>();
 
                 for (int j = 0; j < sources.length(); j++) {
                     JSONObject source = sources.getJSONObject(j);
                     ids[j] = source.getString("id");
                     names[j] = source.optString("name", "");
+                    if (source.optBoolean("fav", false)) {
+                        favorites.add(ids[j]);
+                    }
                 }
 
                 if (ids.length == 0) {
@@ -81,7 +89,7 @@ public final class TvChannel {
 
                 String cover = channel.optString("cover", "");
                 result.add(new TvChannel(channel.getString("name"), color, ids, names,
-                        cover.isEmpty() ? null : "opentube/" + cover, Math.max(0, channel.optInt("minMinutes", 0))));
+                        cover.isEmpty() ? null : "opentube/" + cover, Math.max(0, channel.optInt("minMinutes", 0)), favorites));
             }
         } catch (Exception e) {
             e.printStackTrace();
