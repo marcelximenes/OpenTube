@@ -179,6 +179,13 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
 
+        <!-- OpenTube: grade de canais de TV -->
+        <activity
+            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
+            android:screenOrientation="unspecified"/>
+
         <activity
             android:name="com.liskovsoft.smartyoutubetv2.tv.ui.channel.ChannelActivity"
             android:launchMode="singleInstance"

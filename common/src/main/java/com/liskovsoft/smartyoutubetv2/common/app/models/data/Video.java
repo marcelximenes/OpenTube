@@ -97,6 +97,8 @@ public final class Video {
     public boolean deArrowProcessed;
     public boolean isLiveEnd;
     public boolean isShuffled;
+    /** OpenTube: sempre começa do zero, ignorando a posição salva */
+    public boolean openTubeFromZero;
     public String searchQuery;
     private int startSegmentNum;
     private long liveDurationMs = -1;

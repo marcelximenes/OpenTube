@@ -1,0 +1,2154 @@
+{
+ "version": 1,
+ "channels": [
+  {
+   "name": "Arch3",
+   "color": "#5B9BE5",
+   "sources": [
+    {
+     "id": "UC0k238zFx-Z8xFH0sxCrPJg",
+     "name": "Architectural Digest"
+    },
+    {
+     "id": "UC9BZjQl4YsPkLAiSvHj7s-A",
+     "name": "ARQDOC"
+    },
+    {
+     "id": "UCJ_2hNMxOzNjviJBiLWHMqg",
+     "name": "Dami Lee"
+    },
+    {
+     "id": "UCBqc02MY5MVZgqdHMlvQL7A",
+     "name": "Architecture Hunter"
+    },
+    {
+     "id": "UCYAm24PkejQR2xMgJgn7xwg",
+     "name": "Stewart Hicks"
+    },
+    {
+     "id": "UC0intLFzLaudFG-xAvUEO-A",
+     "name": "Not Just Bikes"
+    },
+    {
+     "id": "UCGc8ZVCsrR3dAuhvUbkbToQ",
+     "name": "City Beautiful"
+    },
+    {
+     "id": "UCMOqf8ab-42UUQIdVoKwjlQ",
+     "name": "Practical Engineering"
+    },
+    {
+     "id": "UC6n8I1UDTKP1IWjQMg6_TwA",
+     "name": "The B1M"
+    },
+    {
+     "id": "UCsWG9ANbrmgR0z-eFk_A3YQ",
+     "name": "Dezeen"
+    },
+    {
+     "id": "UCXP_5IkhhUspBadQsKZSJoA",
+     "name": "Caos Planejado"
+    },
+    {
+     "id": "UCKIwJ734FQFP2nWBxvNx_YQ",
+     "name": "Urban Atlas"
+    },
+    {
+     "id": "UC_zQ777U6YTyatP3P1wi3xw",
+     "name": "NEVER TOO SMALL"
+    },
+    {
+     "id": "UCgxg48_pay4R67s-7WOgWFA",
+     "name": "The Local Project"
+    },
+    {
+     "id": "UCP9zziS-u29-MkghIFBU0ag",
+     "name": "UGREEN - Decifrando a Ciência das Construções"
+    },
+    {
+     "id": "UCDsElQQt_gCZ9LgnW-7v-cQ",
+     "name": "Kirsten Dirksen"
+    },
+    {
+     "id": "UCoNTMWgGuXtGPLv9UeJZwBw",
+     "name": "Living Big In A Tiny House"
+    },
+    {
+     "id": "UCN5CBM1NkqDYAHgS-AbgGHA",
+     "name": "Oh The Urbanity!"
+    },
+    {
+     "id": "UCcvfHa-GHSOHFAjU0-Ie57A",
+     "name": "Adam Something"
+    },
+    {
+     "id": "UC-LM91jkqJdWFvm9B5G-w7Q",
+     "name": "Alan Fisher"
+    },
+    {
+     "id": "UCf4iKXL_SJQ5d0qsKkboRRQ",
+     "name": "RMTransit"
+    },
+    {
+     "id": "UCR1IuLEqb6UEA_zQ81kwXfg",
+     "name": "Real Engineering"
+    },
+    {
+     "id": "UC1ZBQ-F-yktYD4m5AzM6pww",
+     "name": "Mustard"
+    },
+    {
+     "id": "UClqhvGmHcvWL9w3R48t9QXQ",
+     "name": "Engineering Explained"
+    },
+    {
+     "id": "UC3r_kdJocuqtDYb2GgM42Ng",
+     "name": "ArchDaily"
+    },
+    {
+     "id": "UCoc2ZM2cYas4DijNdaEJXUA",
+     "name": "30X40 Design Workshop"
+    },
+    {
+     "id": "UCXvzpK4eKUJysEZ42zjTUdw",
+     "name": "Studio McGee"
+    },
+    {
+     "id": "UCmpHOZ6GqCvcWyPX3svgz-g",
+     "name": "Tiny House Expedition"
+    },
+    {
+     "id": "UCmpc-lRLDToCUwJewlPeJ4w",
+     "name": "Arquitetura e Urbanismo para Todos"
+    },
+    {
+     "id": "UCuVLG9pThvBABcYCm7pkNkA",
+     "name": "Climate Town"
+    }
+   ],
+   "cover": "covers/arch3.png"
+  },
+  {
+   "name": "SCIFI",
+   "color": "#E5484D",
+   "sources": [
+    {
+     "id": "UC7sDT8jZ76VLV1u__krUutA",
+     "name": "DUST"
+    },
+    {
+     "id": "UCD4ZEYIBnHIC2DUhiizMOHg",
+     "name": "Oats Studios"
+    },
+    {
+     "id": "UCrSvhrtUgpZT3EU0x1Zoy-w",
+     "name": "CGMeetup"
+    },
+    {
+     "id": "UClQMNIPzABe5FqUrOO0yEiQ",
+     "name": "Viddsee"
+    },
+    {
+     "id": "UCZFipeZtQM5CKUjx6grh54g",
+     "name": "Isaac Arthur"
+    },
+    {
+     "id": "UC1rFmaGLYr0Ve_Y_soxZNWQ",
+     "name": "Quinn's Ideas"
+    },
+    {
+     "id": "UC_ELnYVFVVwliodQDNgjgZA",
+     "name": "The Archive In Between"
+    },
+    {
+     "id": "UCTMt7iMWa7jy0fNXIktwyLA",
+     "name": "Omeleto"
+    },
+    {
+     "id": "UCMOB6uDg7e-h8OuCw8dK2_Q",
+     "name": "ALTER"
+    },
+    {
+     "id": "UCyp-EzJrdTOd9uNPvmdst-w",
+     "name": "Short of the Week"
+    },
+    {
+     "id": "UCimiUgDLbi6P17BdaCZpVbg",
+     "name": "exurb1a"
+    },
+    {
+     "id": "UC-2YHgc363EdcusLIBbgxzg",
+     "name": "Joe Scott"
+    },
+    {
+     "id": "UCpqCsO-fb2_OzVxm7J9MslA",
+     "name": "The Templin Institute"
+    },
+    {
+     "id": "UCFQMO-YL87u-6Rt8hIVsRjA",
+     "name": "Hello Future Me"
+    },
+    {
+     "id": "UCRcgy6GzDeccI7dkbbBna3Q",
+     "name": "LEMMiNO"
+    },
+    {
+     "id": "UC8X4WT5_lUXqMjeN8bGFk9w",
+     "name": "Kane Pixels"
+    },
+    {
+     "id": "UCveZqqGewoyPiacooywP5Ig",
+     "name": "Alt Shift X"
+    },
+    {
+     "id": "UCSpFnDQr88xCZ80N-X7t0nQ",
+     "name": "Corridor Crew"
+    }
+   ],
+   "cover": "covers/scifi.png"
+  },
+  {
+   "name": "LOFI",
+   "color": "#3DD68C",
+   "sources": [
+    {
+     "id": "UCSJ4gkVC6NrvII8umztf0Ow",
+     "name": "Lofi Girl"
+    },
+    {
+     "id": "UCOxqgCwgOqC2lMqC5PYz_Dg",
+     "name": "Chillhop Music"
+    },
+    {
+     "id": "UC-nsWjyWoaR1Hwn8iOuz5SA",
+     "name": "LoFi Brasil"
+    },
+    {
+     "id": "UCWzZ5TIGoZ6o-KtbGCyhnhg",
+     "name": "College Music"
+    },
+    {
+     "id": "UC0fiLCwTmAukotCXYnqfj0A",
+     "name": "the bootleg boy"
+    },
+    {
+     "id": "UCoQ_Hu6PvpK0jDKrYoSgQrw",
+     "name": "Homework Radio"
+    },
+    {
+     "id": "UC_EH_0BgwxvckcyKALdv3cw",
+     "name": "steezy asf"
+    },
+    {
+     "id": "UCi8wqezBudeAiTdKOX571ug",
+     "name": "the jazz hop café"
+    },
+    {
+     "id": "UCz9_4daWw-uWuqeB6_IkhMg",
+     "name": "Dreamhop Music"
+    },
+    {
+     "id": "UCwVQIkAtyZzQSA-OY1rsGig",
+     "name": "Chill Music Lab"
+    },
+    {
+     "id": "UC6j-6HfEq9bu42UG4gAoyRA",
+     "name": "Lofi Fruits Music"
+    },
+    {
+     "id": "UC6ghlxmJNMd8BE_u1HR-bTg",
+     "name": "The 80s Guy"
+    },
+    {
+     "id": "UCXIyz409s7bNWVcM-vjfdVA",
+     "name": "Majestic Casual"
+    },
+    {
+     "id": "UC5nc_ZtjKW1htCVZVRxlQAQ",
+     "name": "Mr Suicide Sheep"
+    },
+    {
+     "id": "UCfR8HhkbpDAwvYxrecNg4Mg",
+     "name": "Ambient Worlds"
+    },
+    {
+     "id": "UCJhjE7wbdYAae1G25m0tHAA",
+     "name": "Cafe Music BGM channel"
+    },
+    {
+     "id": "UC84t1K5ri-7u9bFCaUKTXDA",
+     "name": "Relaxing Jazz Piano"
+    },
+    {
+     "id": "UCO5XcuQe_fLJVI3sZ0LmGCA",
+     "name": "Nujabes"
+    },
+    {
+     "id": "UCyD59CI7beJDU493glZpxgA",
+     "name": "lofi geek"
+    }
+   ],
+   "cover": "covers/lofi.png"
+  },
+  {
+   "name": "SESSIONS",
+   "color": "#F2C94C",
+   "sources": [
+    {
+     "id": "UC2Qw1dzXDBAZPwS7zm37g8g",
+     "name": "COLORS"
+    },
+    {
+     "id": "UC4eYXhJI4-7wSWc8UNRwD4A",
+     "name": "NPR Music (Tiny Desk)"
+    },
+    {
+     "id": "UCU7SmGvwsGNH1AoDFZQIO8Q",
+     "name": "Paloma Cosano"
+    },
+    {
+     "id": "UC2as7PrmUgmdZAkMIWNY6EQ",
+     "name": "Parcels"
+    },
+    {
+     "id": "UCtWuB1D_E3mcyYThA9iKggQ",
+     "name": "Vulfpeck (Vulf)"
+    },
+    {
+     "id": "UC3I2GFN_F8WudD_2jUZbojA",
+     "name": "KEXP"
+    },
+    {
+     "id": "UCRLZb8PpI9N7COmYqHiDH7A",
+     "name": "Sofar Sounds"
+    },
+    {
+     "id": "UCi7ikzbPDK_IOvZn7rOPUVg",
+     "name": "Showlivre"
+    },
+    {
+     "id": "UCFAKGci5lneha2x4XMbzYrQ",
+     "name": "La Blogothèque"
+    },
+    {
+     "id": "UCqrFwa5vueOTzGZ7NSlnvlQ",
+     "name": "PineappleStormTV"
+    },
+    {
+     "id": "UCPKT_csvP72boVX0XrMtagQ",
+     "name": "Cercle"
+    },
+    {
+     "id": "UCFV9qv5deOsJ_AF7k_t4h3A",
+     "name": "Tiny Desk Brasil"
+    },
+    {
+     "id": "UC-2JUs_G21BrJ0efehwGkUw",
+     "name": "Scary Pockets"
+    },
+    {
+     "id": "UClUghHElK6LMJrK1_xCWOPA",
+     "name": "Montreux Jazz Festival"
+    },
+    {
+     "id": "UC-yUK_2HT9rxQSsweAjjNiA",
+     "name": "stories"
+    },
+    {
+     "id": "UCtuOQu2HdbpvTy7PR9rfsMA",
+     "name": "Nowhere To Land"
+    },
+    {
+     "id": "UCC8sjLWfha4fPIgQXIT5tcQ",
+     "name": "UM CAFÉ LÁ EM CASA"
+    },
+    {
+     "id": "UCOUCJkyPwqTp2Chnq6VnFKw",
+     "name": "The Reign Of Kindo"
+    },
+    {
+     "id": "UCWjmAUHmajb1-eo5WKk_22A",
+     "name": "Audiotree Live"
+    },
+    {
+     "id": "UCG36u-k09zdIPQh5EEdVgTA",
+     "name": "Mahogany Sessions"
+    },
+    {
+     "id": "UCd2KNtfphz8HvYzM4pwtHmg",
+     "name": "triple j (Like A Version)"
+    },
+    {
+     "id": "UC-FQUIVQ-bZiefzBiQAa8Fw",
+     "name": "BBC Radio 1"
+    },
+    {
+     "id": "UCwfYU2M8TBAus0TIaNtjxlQ",
+     "name": "Jam in the Van"
+    },
+    {
+     "id": "UC54U5gpKkaa_BpXRVNip2Dw",
+     "name": "KCRW"
+    },
+    {
+     "id": "UCGBpxWJr9FNOcFYA5GkKrMg",
+     "name": "Boiler Room"
+    },
+    {
+     "id": "UCGxLOaA_QnWLhTnf5depKLg",
+     "name": "From The Basement"
+    },
+    {
+     "id": "UCLrFzxcwT97ROXn3JAiDIqQ",
+     "name": "Austin City Limits"
+    },
+    {
+     "id": "UC-7BJPPk_oQGTED1XQA_DTw",
+     "name": "Vevo DSCVR"
+    },
+    {
+     "id": "UCqeIY2maSa-UhdbEs35CC-A",
+     "name": "Música de Bolso"
+    }
+   ],
+   "cover": "covers/sessions.png"
+  },
+  {
+   "name": "DSGN",
+   "color": "#E8944A",
+   "sources": [
+    {
+     "id": "UCR6MXpfFWbOpNlxuhWCBV_A",
+     "name": "Kole Jain"
+    },
+    {
+     "id": "UCqausxjCnGsTl0rQgM7HZWQ",
+     "name": "Designer in Japan"
+    },
+    {
+     "id": "UC-b3c7kxa5vU-bnmaROgvog",
+     "name": "The Futur"
+    },
+    {
+     "id": "UC6CXMJjB30e0UlFo082IFVA",
+     "name": "Clube do Design"
+    },
+    {
+     "id": "UCSIkG6wtvxDduCumCRAAO4A",
+     "name": "Will Paterson"
+    },
+    {
+     "id": "UCoeJKtPJLoIBqWq4o8TDLpA",
+     "name": "Satori Graphics"
+    },
+    {
+     "id": "UC2PV1NNl_wDFX9PbmKB7UWA",
+     "name": "Design de Conversão"
+    },
+    {
+     "id": "UCbqd2YmFeHMwxlj4NcN5zPQ",
+     "name": "Zimri Mayfield"
+    },
+    {
+     "id": "UCT_of6HCtVZFpnnnLUeAGYA",
+     "name": "Yes I'm a Designer"
+    },
+    {
+     "id": "UCHR81XjA9I6hfFeTFiJRaDQ",
+     "name": "Martina Flor"
+    },
+    {
+     "id": "UCN7dywl5wDxTu1RM3eJ_h9Q",
+     "name": "Flux Academy"
+    },
+    {
+     "id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+     "name": "DesignCourse"
+    },
+    {
+     "id": "UCSb-xYOELhIqVr2n9s-b_4w",
+     "name": "Linus Boman"
+    },
+    {
+     "id": "UCAbq1eKey19tt-FfaIO1RMA",
+     "name": "Dansky"
+    },
+    {
+     "id": "UCvBGFeXbBrq3W9_0oNLJREQ",
+     "name": "Jesse Showalter"
+    },
+    {
+     "id": "UCScRSwdX0t31gjk3MYXIuYQ",
+     "name": "Charli Marie"
+    },
+    {
+     "id": "UC64eec0UYHxflyEWgyZOvLA",
+     "name": "Gareth David Studio"
+    },
+    {
+     "id": "UC0f9NbKjUUbnL2cOa12ENIQ",
+     "name": "Mike Locke"
+    },
+    {
+     "id": "UCa8W2_uf81Ew6gYuw0VPSeA",
+     "name": "Juxtopposed"
+    },
+    {
+     "id": "UCWUGGwfTfJ0-2jUS3dZqOJA",
+     "name": "Femke"
+    },
+    {
+     "id": "UC8lxnUR_CzruT2KA6cb7p0Q",
+     "name": "Envato Tuts+"
+    },
+    {
+     "id": "UCeR7U67I2J1icV8E6Rn40vQ",
+     "name": "tutvid"
+    },
+    {
+     "id": "UCwQ0ySicc9jpUka4n3S2gaA",
+     "name": "Ian Barnard"
+    },
+    {
+     "id": "UCdgUN8rX3SEb9L7FDub3I6A",
+     "name": "Design Theory"
+    }
+   ],
+   "cover": "covers/dsgn.png"
+  },
+  {
+   "name": "Tech no Logic",
+   "color": "#9B7BE0",
+   "sources": [
+    {
+     "id": "UCsBjURrPoezykLs9EqgamOA",
+     "name": "Fireship"
+    },
+    {
+     "id": "UCuQT7Vc3OjjZuGkqehNxb6w",
+     "name": "Enrico Tartarotti"
+    },
+    {
+     "id": "UCqv7gk4p_rB4nRz0j7B5yFA",
+     "name": "Interface Studies"
+    },
+    {
+     "id": "UC4QZ_LsYcvcq7qOsOhpAX4A",
+     "name": "ColdFusion"
+    },
+    {
+     "id": "UCtZO3K2p8mqFwiKWb9k7fXA",
+     "name": "TechAltar"
+    },
+    {
+     "id": "UCBJycsmduvYEL83R_U4JriQ",
+     "name": "Marques Brownlee"
+    },
+    {
+     "id": "UCU5JicSrEM5A63jkJ2QvGYw",
+     "name": "Filipe Deschamps"
+    },
+    {
+     "id": "UCMiJRAwDNSNzuYeN2uWa0pA",
+     "name": "Mrwhosetheboss"
+    },
+    {
+     "id": "UC1LpsuAUaKoMzzJSEt5WImw",
+     "name": "Asianometry"
+    },
+    {
+     "id": "UCkVfrGwV-iG9bSsgCbrNPxQ",
+     "name": "Better Stack"
+    },
+    {
+     "id": "UCEf5U1dB5a2e2S-XUlnhxSA",
+     "name": "Diolinux"
+    },
+    {
+     "id": "UC9Rrud-8CaHokDtK9FszvRg",
+     "name": "Github Awesome"
+    },
+    {
+     "id": "UCeeFfhMcJa1kjtfZAGskOCA",
+     "name": "TechLinked"
+    },
+    {
+     "id": "UCddiUEpeqJcYeBxX1IVBKvQ",
+     "name": "The Verge"
+    },
+    {
+     "id": "UC5UAwBUum7CPN5buc-_N1Fw",
+     "name": "The Linux Experiment"
+    },
+    {
+     "id": "UCIhmSXHw5WB6cMqkVGiZMbg",
+     "name": "Addie LaMarr"
+    },
+    {
+     "id": "UCXuqSBlHAE6Xw-yeJA0Tunw",
+     "name": "Linus Tech Tips"
+    },
+    {
+     "id": "UC9-y-6csu5WGm29I7JiwpnA",
+     "name": "Computerphile"
+    },
+    {
+     "id": "UCbfYPyITQ-7l4upoX8nvctg",
+     "name": "Two Minute Papers"
+    },
+    {
+     "id": "UCUyeluBRhGPCW4rPe_UvBZQ",
+     "name": "ThePrimeTime"
+    },
+    {
+     "id": "UCbRP3c757lWg9M-U7TyEkXA",
+     "name": "Theo - t3.gg"
+    },
+    {
+     "id": "UC6biysICWOJ-C3P4Tyeggzg",
+     "name": "Low Level"
+    },
+    {
+     "id": "UCS0N5baNlQWJCUrhCEo8WlA",
+     "name": "Ben Eater"
+    },
+    {
+     "id": "UCqpNnEzmmlzBfdy3X0eMOMg",
+     "name": "Tecnoblog"
+    },
+    {
+     "id": "UC_bXJnsgwOqEPA_-6N6faKw",
+     "name": "Canaltech"
+    },
+    {
+     "id": "UCFuIUoyHB12qpYa8Jpxoxow",
+     "name": "Código Fonte TV"
+    },
+    {
+     "id": "UCib793mnUOhWymCh2VJKplQ",
+     "name": "Akitando (Fabio Akita)"
+    },
+    {
+     "id": "UCyHOBY6IDZF9zOKJPou2Rgg",
+     "name": "Lucas Montano"
+    },
+    {
+     "id": "UCSfwM5u0Kce6Cce8_S72olg",
+     "name": "Rocketseat"
+    },
+    {
+     "id": "UCVYamHliCI9rw1tHR1xbkfw",
+     "name": "Dave2D"
+    },
+    {
+     "id": "UCdmGjywrxeOPfC7vDllmSgQ",
+     "name": "TecMundo"
+    }
+   ],
+   "cover": "covers/tech-no-logic.png"
+  },
+  {
+   "name": "POLITIK",
+   "color": "#3FB8AF",
+   "sources": [
+    {
+     "id": "UCAMExYqcweM7PUebKfmLdFA",
+     "name": "Ian Neves"
+    },
+    {
+     "id": "UCYVrkMZdrjq5eICOG6Rxiwg",
+     "name": "Tecnologia e Classe (TeClas)"
+    },
+    {
+     "id": "UCw8gC06oOjUtA553wNXO5jw",
+     "name": "Filipe Boni"
+    },
+    {
+     "id": "UC0fGGprihDIlQ3ykWvcb9hg",
+     "name": "Tese Onze"
+    },
+    {
+     "id": "UCk5BcU1rOy6hepflk7_q_Pw",
+     "name": "Meteoro Brasil"
+    },
+    {
+     "id": "UC02coXfDPjEmU8uDT2G8Z2A",
+     "name": "Jones Manoel"
+    },
+    {
+     "id": "UCSMqateX8OA2s1wsOR2EgJA",
+     "name": "TLDR News"
+    },
+    {
+     "id": "UCOzMAa6IhV6uwYQATYG_2kg",
+     "name": "Novara Media"
+    },
+    {
+     "id": "UCugK_9W-5o56H0pEnJtFQnw",
+     "name": "Canal Meio"
+    },
+    {
+     "id": "UCTnRtQ9IkBGmCKcLB31BcyA",
+     "name": "ICL Notícias"
+    },
+    {
+     "id": "UCUM4-KGZEXC2pk6zRDL9jMQ",
+     "name": "MyNews"
+    },
+    {
+     "id": "UCOnuheHbS2DgZiAZFL0-Sbg",
+     "name": "Brasil de Fato"
+    },
+    {
+     "id": "UCOjUlJ4EpPxuhtT0zEVw25A",
+     "name": "Opera Mundi"
+    },
+    {
+     "id": "UCRuy5PigeeBuecKnwqhM4yg",
+     "name": "TV 247"
+    },
+    {
+     "id": "UCutrj9cR0cNi2PfiTMGAWrA",
+     "name": "DCM TV"
+    },
+    {
+     "id": "UC3sMBA3BdnsKSVI0WB9yVWQ",
+     "name": "Revista Fórum"
+    },
+    {
+     "id": "UCDGz2exMIsPQ4k9VrsuhKTA",
+     "name": "CartaCapital"
+    },
+    {
+     "id": "UCNqzAD9EiECreuH6LA8IYeA",
+     "name": "The Intercept Brasil"
+    },
+    {
+     "id": "UCRVbqma6TaIHp9E151nC8sA",
+     "name": "Agência Pública"
+    },
+    {
+     "id": "UCsMj2K36ejga547ge5cBscg",
+     "name": "Xadrez Verbal"
+    },
+    {
+     "id": "UCrtOL8bJsh-csozGS2aV77Q",
+     "name": "Estadão"
+    },
+    {
+     "id": "UCmYuiV9wAR3i8p19Ygc7izg",
+     "name": "Folha de S.Paulo"
+    },
+    {
+     "id": "UCVFbXI6Gu8U2f9Gjtxw4A-Q",
+     "name": "UOL"
+    },
+    {
+     "id": "UCoa-D_VfMkFrCYodrOC9-mA",
+     "name": "Band Jornalismo"
+    },
+    {
+     "id": "UCvdwhh_fDyWccR42-rReZLw",
+     "name": "CNN Brasil"
+    },
+    {
+     "id": "UCp6RRaz93Pt2xYZoEye_rLA",
+     "name": "GloboNews"
+    },
+    {
+     "id": "UCFCiSRbCVwQ_BQaDQBYxN_A",
+     "name": "Poder360"
+    },
+    {
+     "id": "UCP391YRAjSOdM_bwievgaZA",
+     "name": "Jovem Pan News"
+    },
+    {
+     "id": "UCLmvyoJW1wJlKY-l1KguCSw",
+     "name": "O Antagonista"
+    },
+    {
+     "id": "UCWdGgeyOnCOGnvhNdbVl1dQ",
+     "name": "Gazeta do Povo"
+    }
+   ],
+   "cover": "covers/politik.png"
+  },
+  {
+   "name": "NEWS",
+   "color": "#E06BA8",
+   "sources": [
+    {
+     "id": "UCUMZ7gohGI9HcU9VNsr2FJQ",
+     "name": "Bloomberg Originals"
+    },
+    {
+     "id": "UCQXHTFnQYFTqN0MqmNh9EIA",
+     "name": "BBC World Service"
+    },
+    {
+     "id": "UCarEovlrD9QY-fy-Z6apIDQ",
+     "name": "Hasan Minhaj"
+    },
+    {
+     "id": "UCkJ8uPxz6UvoI6ihgQJZnww",
+     "name": "DW Brasil"
+    },
+    {
+     "id": "UCthbIFAxbXTTQEC7EcQvP1Q",
+     "name": "BBC News Brasil"
+    },
+    {
+     "id": "UCZaT_X_mc0BI-djXOlfhqWQ",
+     "name": "VICE News"
+    },
+    {
+     "id": "UCNye-wNBqNL5ZzHSJj3l8Bg",
+     "name": "Al Jazeera English"
+    },
+    {
+     "id": "UC0p5jTq6Xx_DosDFxVXnWaQ",
+     "name": "The Economist"
+    },
+    {
+     "id": "UCqit4NtRDfdEHKX_zgmAwrg",
+     "name": "Morning Brew"
+    },
+    {
+     "id": "UCDwIeUAXy_zcPYM9Os-HwnQ",
+     "name": "Jornal Nota"
+    },
+    {
+     "id": "UChqUTb7kYRX8-EiaN3XFrSQ",
+     "name": "Reuters"
+    },
+    {
+     "id": "UC52X5wxOL_s5yw0dQk7NtgA",
+     "name": "Associated Press"
+    },
+    {
+     "id": "UCoUxsWakJucWg46KW5RsvPw",
+     "name": "Financial Times"
+    },
+    {
+     "id": "UCK7tptUDHh-RYDsdxO1-5QQ",
+     "name": "The Wall Street Journal"
+    },
+    {
+     "id": "UCqnbDFdCpuN8CMEg0VuEBqA",
+     "name": "The New York Times"
+    },
+    {
+     "id": "UCHpw8xwDNhU9gdohEcJu4aA",
+     "name": "The Guardian"
+    },
+    {
+     "id": "UCTrQ7HXWRRxr7OsOtodr2_w",
+     "name": "Channel 4 News"
+    },
+    {
+     "id": "UC6ZFN9Tx6xh-skXCuRHCDpQ",
+     "name": "PBS NewsHour"
+    },
+    {
+     "id": "UCQfwfsi5VrQ8yKZ-UWmAEFg",
+     "name": "FRANCE 24 English"
+    },
+    {
+     "id": "UCknLrEdhRCp1aegoMqRaCZg",
+     "name": "DW News"
+    },
+    {
+     "id": "UCoMdktPbSTixAyNGwb-UYkQ",
+     "name": "Sky News"
+    },
+    {
+     "id": "UCSrZ3UV4jOidv8ppoVuvW9Q",
+     "name": "euronews"
+    },
+    {
+     "id": "UC3ScyryU9Oy9Wse3a8OAmYQ",
+     "name": "FRONTLINE PBS"
+    },
+    {
+     "id": "UC-uhvujip5deVcEtLxnW8qg",
+     "name": "TLDR News Global"
+    },
+    {
+     "id": "UCYpRDnhk5H8h16jpS84uqsA",
+     "name": "Le Monde"
+    },
+    {
+     "id": "UC16niRr50-MSBwiO3YDb3RA",
+     "name": "BBC News"
+    },
+    {
+     "id": "UCaGmdJSSiR7fkh2A-c6emsA",
+     "name": "g1"
+    },
+    {
+     "id": "UC376n347Ob5Lwzq2WGzF1AA",
+     "name": "SBT News"
+    },
+    {
+     "id": "UCIM-wfyv9hg2oEiA81mQc2A",
+     "name": "RTP Notícias"
+    },
+    {
+     "id": "UC_Lnb8ZHqqgLbp-7hltuT9w",
+     "name": "CNA Insider"
+    }
+   ]
+  },
+  {
+   "name": "History",
+   "color": "#DCD2BE",
+   "sources": [
+    {
+     "id": "UCPZizuKrujS0T4BEsIe6Wiw",
+     "name": "Uma Tupá no Tempo"
+    },
+    {
+     "id": "UCDjzWHhTShC59KtduL-jeig",
+     "name": "Estranha História"
+    },
+    {
+     "id": "UCdrNJIAfB5ag3od5rg9Q_7w",
+     "name": "Vogalizando a História"
+    },
+    {
+     "id": "UCQRPDZMSwXFEDS67uc7kIdg",
+     "name": "Buenas Ideias"
+    },
+    {
+     "id": "UCWXC1qTKvs0OJEl_V5ylG7Q",
+     "name": "ArqueoloBia"
+    },
+    {
+     "id": "UCoydhtfFSk1fZXNRnkGnneQ",
+     "name": "ESOTERICA"
+    },
+    {
+     "id": "UCct9aR7HC79Cv2g-9oDOTLw",
+     "name": "Religion for Breakfast"
+    },
+    {
+     "id": "UC9dRb4fbJQIbQ3KHJZF_z0g",
+     "name": "Let's Talk Religion"
+    },
+    {
+     "id": "UCT6Y5JJPKe_JDMivpKgVXew",
+     "name": "Fall of Civilizations"
+    },
+    {
+     "id": "UClu474HMt895mVxZdlIHXEA",
+     "name": "Nerdologia"
+    },
+    {
+     "id": "UC7o-UFkoAPCoKxpKOfrs4zQ",
+     "name": "UsefulCharts"
+    },
+    {
+     "id": "UCtMjnvODdK1Gwy8psW3dzrg",
+     "name": "Leitura ObrigaHISTÓRIA"
+    },
+    {
+     "id": "UC1ZVqDtML85igEQuk2Lp0IQ",
+     "name": "Cortes do Estranha História"
+    },
+    {
+     "id": "UC435pUA_He185PfqQcQYS-Q",
+     "name": "Dr Julia Martins"
+    },
+    {
+     "id": "UCxERSsg37iFHCPeru8YlTAA",
+     "name": "USA History Facts"
+    },
+    {
+     "id": "UCO6nDCimkF79NZRRb8YiDcA",
+     "name": "Storied"
+    },
+    {
+     "id": "UCU78dqQJopShvHsUVD4FiLw",
+     "name": "Guilherme Dobrychtop"
+    },
+    {
+     "id": "UCMmaBzfCCwZ2KqaBJjkj0fw",
+     "name": "Kings and Generals"
+    },
+    {
+     "id": "UCv_vLHiWVBh_FR9vbeuiY-A",
+     "name": "Historia Civilis"
+    },
+    {
+     "id": "UCvPXiKxH-eH9xq-80vpgmKQ",
+     "name": "Epic History TV"
+    },
+    {
+     "id": "UCNIuvl7V8zACPpTmmNIqP2A",
+     "name": "OverSimplified"
+    },
+    {
+     "id": "UC4sEmXUuWIFlxRIFBRV6VXQ",
+     "name": "The History Guy"
+    },
+    {
+     "id": "UCwO-UgquohXwoe7f0e6lMnw",
+     "name": "Invicta"
+    },
+    {
+     "id": "UCsaGKqPZnGp_7N80hcHySGQ",
+     "name": "Tasting History with Max Miller"
+    },
+    {
+     "id": "UCCODtTcd5M1JavPCOr_Uydg",
+     "name": "Extra History"
+    },
+    {
+     "id": "UCfVBnmIBGemx8mLRh3WLm5g",
+     "name": "Se Liga Nessa História"
+    },
+    {
+     "id": "UCeLwY_iqGhtq3AIdAEvT9-g",
+     "name": "Parabólica"
+    }
+   ],
+   "cover": "covers/history.png"
+  },
+  {
+   "name": "Entertainment",
+   "color": "#7FB3D5",
+   "sources": [
+    {
+     "id": "UCmGSJVG3mCRXVOP4yZrU1Dw",
+     "name": "Johnny Harris"
+    },
+    {
+     "id": "UCLXo7UDZvByw2ixzpQCufnA",
+     "name": "Vox"
+    },
+    {
+     "id": "UC415bOPUcGSamy543abLmRA",
+     "name": "Cleo Abram"
+    },
+    {
+     "id": "UCR-NWWerSn4uOOpv9yLQ92Q",
+     "name": "Aprofundo"
+    },
+    {
+     "id": "UCODHrzPMGbNv67e84WDZhQQ",
+     "name": "fern"
+    },
+    {
+     "id": "UCsXVk37bltHxD1rDPwtNM8Q",
+     "name": "Kurzgesagt – In a Nutshell"
+    },
+    {
+     "id": "UCqPTW4CeoAgq111DA__mP9g",
+     "name": "Max Fisher"
+    },
+    {
+     "id": "UCgNg3vwj3xt7QOrcIDaHdFg",
+     "name": "PolyMatter"
+    },
+    {
+     "id": "UC9RM-iSvTu1uPJb8X5yp3EQ",
+     "name": "Wendover Productions"
+    },
+    {
+     "id": "UCP5tjEmvPItGyLhmjdwP7Ww",
+     "name": "RealLifeLore"
+    },
+    {
+     "id": "UCuCkxoKLYO_EQ2GeFtbM_bw",
+     "name": "Half as Interesting"
+    },
+    {
+     "id": "UCGo3vjM2Ll3XujL-zYT5SMg",
+     "name": "Ponto em Comum"
+    },
+    {
+     "id": "UCl79BVUfEZ830vH76L12ChA",
+     "name": "Quadro em Branco"
+    },
+    {
+     "id": "UCGudGqToOw9hWGR88W9Jutg",
+     "name": "Howtown"
+    },
+    {
+     "id": "UCRlICXvO4XR4HMeEB9JjDlA",
+     "name": "Thoughty2"
+    },
+    {
+     "id": "UCpFFItkfZz1qz5PpHpqzYBw",
+     "name": "Nexpo"
+    },
+    {
+     "id": "UCweDKPSF65wRw5VHFUJYiow",
+     "name": "Curious Archive"
+    },
+    {
+     "id": "UCjRJR_n1PTYWuF1nu_OiNpA",
+     "name": "Ok so..."
+    },
+    {
+     "id": "UCwmFOfFuvRPI112vR5DNnrA",
+     "name": "Vsauce3"
+    },
+    {
+     "id": "UC42VsoDtra5hMiXZSsD6eGg",
+     "name": "The Modern Rogue"
+    },
+    {
+     "id": "UCto7D1L-MiRoOziCXK9uT5Q",
+     "name": "Let's Game It Out"
+    },
+    {
+     "id": "UCK3IOOEUXQT-dAl3jy-xkaw",
+     "name": "Baka Gaijin"
+    },
+    {
+     "id": "UC033rpv7OKk-QYfrvwl5s8Q",
+     "name": "TV Quase"
+    },
+    {
+     "id": "UCRCzzzS_kI6lAimteTAIibg",
+     "name": "Adorian"
+    },
+    {
+     "id": "UCy9NOqPWY57_bEyDhKsUIfA",
+     "name": "MAS ISSO NA MINHA OPINIÃO"
+    },
+    {
+     "id": "UC2C_jShtL725hvbm1arSV9w",
+     "name": "CGP Grey"
+    },
+    {
+     "id": "UCBa659QWEk1AI4Tg--mrJ2A",
+     "name": "Tom Scott"
+    },
+    {
+     "id": "UCbbQalJ4OaC0oQ0AqRaOJ9g",
+     "name": "Map Men (Jay Foreman)"
+    },
+    {
+     "id": "UCY1kMZp36IQSyNx_9h4mpCg",
+     "name": "Mark Rober"
+    },
+    {
+     "id": "UCz1oFxMrgrQ82-276UCOU9w",
+     "name": "Atlas Pro"
+    },
+    {
+     "id": "UCmmPgObSUPw1HL2lq6H4ffA",
+     "name": "Geography Now"
+    }
+   ]
+  },
+  {
+   "name": "Art",
+   "color": "#C3E88D",
+   "sources": [
+    {
+     "id": "UCTeoouQy5KUUUsbFAJDrJjA",
+     "name": "Artists Pages"
+    },
+    {
+     "id": "UCVcOF5meBNPBMVRelAJKBEA",
+     "name": "Secessio"
+    },
+    {
+     "id": "UCj-_77Q1UK8qx2XJaYILagA",
+     "name": "Inspiraggio"
+    },
+    {
+     "id": "UCePDFpCr78_qmVtpoB1Axaw",
+     "name": "Great Art Explained"
+    },
+    {
+     "id": "UCmQThz1OLYt8mb2PU540LOA",
+     "name": "The Art Assignment"
+    },
+    {
+     "id": "UCJkMlOu7faDgqh4PfzbpLdg",
+     "name": "Nerdwriter1"
+    },
+    {
+     "id": "UCxIruXzvzmLkaH-a-QGnnKQ",
+     "name": "vivieuvi"
+    },
+    {
+     "id": "UCvZe6ZCbF9xgbbbdkiodPKQ",
+     "name": "Baumgartner Restoration"
+    },
+    {
+     "id": "UCOa5dl3Lbf5gr6vJnu8d5QQ",
+     "name": "Arte de Segunda"
+    },
+    {
+     "id": "UClM2LuQ1q5WEc23462tQzBg",
+     "name": "Proko"
+    },
+    {
+     "id": "UC7mtmlqZNhVIkTnexdqMbRA",
+     "name": "Blind Dweller"
+    },
+    {
+     "id": "UC4KEjQmYTFuo_157VNNMQiw",
+     "name": "Erinnerart"
+    },
+    {
+     "id": "UC3R-xanNgtoa8b7gpVexVlA",
+     "name": "Smarthistory"
+    },
+    {
+     "id": "UCDlz9C2bhSW6dcVn_PO5mYw",
+     "name": "The Met"
+    },
+    {
+     "id": "UC9CswYtb5rL31CHwyVoyJvQ",
+     "name": "MoMA"
+    },
+    {
+     "id": "UC2isDei-lrNSrgGYE4Np3PA",
+     "name": "Tate"
+    },
+    {
+     "id": "UCrPOgNsUldOtQsTf9Kjlm_A",
+     "name": "The National Gallery"
+    },
+    {
+     "id": "UCelkSnSbxvIfjjD01uPHHbg",
+     "name": "Sotheby's"
+    },
+    {
+     "id": "UCSbY5GF1eSKtT6d32qC7Krw",
+     "name": "Christie's"
+    },
+    {
+     "id": "UCYLQTu9gEec5OPmNCBJtUpA",
+     "name": "Pinacoteca de São Paulo"
+    },
+    {
+     "id": "UCl_tZ6fP9TdaATguYYRC1XA",
+     "name": "MASP"
+    },
+    {
+     "id": "UCn3RTLTgiO7TjfG7juhFM1g",
+     "name": "Itaú Cultural"
+    },
+    {
+     "id": "UC_YLlyOlc9cyPNaC0JdNfmg",
+     "name": "Instituto Moreira Salles"
+    },
+    {
+     "id": "UCTIoOLzT1jbxAcPW99xn0zQ",
+     "name": "James Gurney"
+    },
+    {
+     "id": "UCUQTqWAaSzhAKRanOpes1nA",
+     "name": "Sinix Design"
+    },
+    {
+     "id": "UCg4eQuX8UoZkpZNno-eyYoQ",
+     "name": "Andrew Tischler"
+    },
+    {
+     "id": "UCHu2KNu6TtJ0p4hpSW7Yv7Q",
+     "name": "Jazza"
+    },
+    {
+     "id": "UCsDxB-CSMQ0Vu_hTag7-2UQ",
+     "name": "Marco Bucci"
+    },
+    {
+     "id": "UCG19ZyhUNbkPzU105yq8Rgw",
+     "name": "Art Prof"
+    }
+   ],
+   "cover": "covers/art.png"
+  },
+  {
+   "name": "Plato TV",
+   "color": "#F78C6C",
+   "sources": [
+    {
+     "id": "UCvQECJukTDE2i6aCoMnS-Vg",
+     "name": "Big Think"
+    },
+    {
+     "id": "UCF6VjYfikYP2vfUx3c6GvVw",
+     "name": "Christian Dunker"
+    },
+    {
+     "id": "UCrx2zrPjhGRi9TwszZiLwEg",
+     "name": "Horses"
+    },
+    {
+     "id": "UC7IcJI8PUf5Z3zKxnZvTBog",
+     "name": "The School of Life"
+    },
+    {
+     "id": "UC2PA-AKmVpU6NKCGtZq_rKQ",
+     "name": "Philosophy Tube"
+    },
+    {
+     "id": "UCFzODWkN1gXm4ryOgLK8Deg",
+     "name": "Ludoviajante"
+    },
+    {
+     "id": "UC9gBKATWNtZCRaKGUVQtDWw",
+     "name": "Epifania Experiência"
+    },
+    {
+     "id": "UCO5QSoES5yn2Dw7YixDYT5Q",
+     "name": "Aperture"
+    },
+    {
+     "id": "UCD2eYNCY8wWVpR0ps6O22aA",
+     "name": "Jonny Thomson"
+    },
+    {
+     "id": "UC-tLyAaPbRZiYrOJxAGB7dQ",
+     "name": "Pursuit of Wonder"
+    },
+    {
+     "id": "UCSzITlgppFAIRbQGIwcInCA",
+     "name": "Great Books Explained"
+    },
+    {
+     "id": "UConJDkGk921yT9hISzFqpzw",
+     "name": "Freethink"
+    },
+    {
+     "id": "UCMFZOcSbNGhyyCSc_vAzXKQ",
+     "name": "Mercearia de Ideias do Gui Marcondes"
+    },
+    {
+     "id": "UCZOyU2kAyWQzQYWIq6KgSvQ",
+     "name": "Voided Thoughts"
+    },
+    {
+     "id": "UCgkyubYnzx7lbiErE64jCRQ",
+     "name": "NPC Mindset"
+    },
+    {
+     "id": "UCaygaMLeGVv8z1P_Q-5cdCQ",
+     "name": "SEEKER TO SEEKER"
+    },
+    {
+     "id": "UCkS_HP3m9NXOgswVAKbMeJQ",
+     "name": "Then & Now"
+    },
+    {
+     "id": "UCjnpuIGovFFUBLG5BeHzTag",
+     "name": "Philosophize This!"
+    },
+    {
+     "id": "UCybBViio_TH_uiFFDJuz5tg",
+     "name": "Einzelgänger"
+    },
+    {
+     "id": "UCiRiQGCHGjDLT9FQXFW0I3A",
+     "name": "Academy of Ideas"
+    },
+    {
+     "id": "UCpvhlSLzg2LT89FNUuN-Sig",
+     "name": "Wireless Philosophy"
+    },
+    {
+     "id": "UCs7nPQIEba0T3tGOWWsZpJQ",
+     "name": "Like Stories of Old"
+    },
+    {
+     "id": "UCUyu6aCBNcyi9jsz_p1hHpA",
+     "name": "The Living Philosophy"
+    },
+    {
+     "id": "UCkUaT0T03TJvafYkfATM2Ag",
+     "name": "Daily Stoic"
+    },
+    {
+     "id": "UC4O2eKb8vI4VlMeNp90asfg",
+     "name": "Prazer, Karnal"
+    },
+    {
+     "id": "UCtvvTFp0XANyllOdmzZr9VQ",
+     "name": "Casa do Saber"
+    },
+    {
+     "id": "UCEgITwyUyDiMVBpmDibjP3g",
+     "name": "Café Filosófico CPFL"
+    },
+    {
+     "id": "UCoGY-yPiCj7MxVsyjRcR_cg",
+     "name": "Isto Não É (cortes)"
+    },
+    {
+     "id": "UCyTS929PXJSUiBEFSzdypgg",
+     "name": "Mario Sergio Cortella"
+    }
+   ],
+   "cover": "covers/plato-tv.png"
+  },
+  {
+   "name": "Science",
+   "color": "#B39DDB",
+   "sources": [
+    {
+     "id": "UCn9Erjy00mpnWeLnRqhsA1g",
+     "name": "Ciência Todo Dia"
+    },
+    {
+     "id": "UCsX5upzW0Tk2riDY1WB887w",
+     "name": "Hannah Fry"
+    },
+    {
+     "id": "UCThg2IH7bNbIQF0hmXA9ECw",
+     "name": "The Rest Is Science"
+    },
+    {
+     "id": "UCR9sFzaG9Ia_kXJhfxtFMBA",
+     "name": "melodysheep"
+    },
+    {
+     "id": "UCHnyfMqiRRG1u-2MsSQLbXA",
+     "name": "Veritasium"
+    },
+    {
+     "id": "UCKHhA5hN2UohhFDfNXB_cvQ",
+     "name": "Manual do Mundo"
+    },
+    {
+     "id": "UC_Fk7hHbl7vv_7K8tYqJd5A",
+     "name": "SpaceToday"
+    },
+    {
+     "id": "UC6nSFpj9HTCZ5t-N3Rm3-HA",
+     "name": "Vsauce"
+    },
+    {
+     "id": "UCqB90BBr6eNRaJl-kl30Xxw",
+     "name": "Peixe Babel"
+    },
+    {
+     "id": "UC7_gcs09iThXybpVgjHZ_7g",
+     "name": "PBS Space Time"
+    },
+    {
+     "id": "UCR_kFbcwWy1cKLCkmcMf4lg",
+     "name": "ABC Science"
+    },
+    {
+     "id": "UCC552Sd-3nyi_tk2BudLUzA",
+     "name": "AsapSCIENCE"
+    },
+    {
+     "id": "UCH4BNI0-FOK2dMXoFtViWHw",
+     "name": "Be Smart"
+    },
+    {
+     "id": "UCFbtcTaMFnOAP0pFO1L8hVw",
+     "name": "Kyle Hill"
+    },
+    {
+     "id": "UC8JT2m0mKEgvEtie3JNKwew",
+     "name": "Naked Science"
+    },
+    {
+     "id": "UC4LewKZKQecmfRbHI1Rzh5A",
+     "name": "Nautilus"
+    },
+    {
+     "id": "UC1yNl2E66ZzKApQdRuTQ4tw",
+     "name": "Sabine Hossenfelder"
+    },
+    {
+     "id": "UCzWQYUVCpZqtN93H8RR44Qw",
+     "name": "Seeker"
+    },
+    {
+     "id": "UC6107grRI4m0o2-emgoDnAA",
+     "name": "SmarterEveryDay"
+    },
+    {
+     "id": "UCrSM1UV_KLAdTzgxyxl3POw",
+     "name": "Olá, Ciência!"
+    },
+    {
+     "id": "UCwg6_F2hDHYrqbNSGjmar4w",
+     "name": "Animalogic"
+    },
+    {
+     "id": "UCRTS1I8oGxw11X7IloindcQ",
+     "name": "Dr Arif Khan - Second Opinion"
+    },
+    {
+     "id": "UCq8ZAAsI89IoJ-fn1gYpO3g",
+     "name": "Nightshift – Kurzgesagt After Dark"
+    },
+    {
+     "id": "UCYO_jab_esuFRV4b17AJtAw",
+     "name": "3Blue1Brown"
+    },
+    {
+     "id": "UCoxcjq-8xIDTYp3uz647V5A",
+     "name": "Numberphile"
+    },
+    {
+     "id": "UCEIwxahdLz7bap-VDs9h35A",
+     "name": "Steve Mould"
+    },
+    {
+     "id": "UCUHW94eEFW7hkUMVaZz4eDg",
+     "name": "minutephysics"
+    },
+    {
+     "id": "UCZYTClx2T1of7BRZ86-8fow",
+     "name": "SciShow"
+    },
+    {
+     "id": "UCSTlOTcyUmzvhQi6F8lFi5w",
+     "name": "Atila Iamarino"
+    },
+    {
+     "id": "UC7DdEm33SyaTDtWYGO2CwdA",
+     "name": "Physics Girl"
+    },
+    {
+     "id": "UCvBqzzvUBLCs8Y7Axb-jZew",
+     "name": "Sixty Symbols"
+    }
+   ],
+   "cover": "covers/science.png"
+  },
+  {
+   "name": "Cinema",
+   "color": "#80CBC4",
+   "sources": [
+    {
+     "id": "UCUyvQV2JsICeLZP4c_h40kA",
+     "name": "Thomas Flight"
+    },
+    {
+     "id": "UCwD6cBY-5-83mnhYyzwEloQ",
+     "name": "It's Just Cinema"
+    },
+    {
+     "id": "UCjFqcJQXGZ6T6sxyFB-5i6A",
+     "name": "Every Frame a Painting"
+    },
+    {
+     "id": "UCx0L2ZdYfiq-tsAXb8IXpQg",
+     "name": "Just Write"
+    },
+    {
+     "id": "UCHMxO1Y1LXdbWiEakd97ueg",
+     "name": "Entreplanos"
+    },
+    {
+     "id": "UCErSSa3CaP_GJxmFpdjG9Jw",
+     "name": "Lessons from the Screenplay"
+    },
+    {
+     "id": "UCC1QUJZGfqrSGwwYXvZhqig",
+     "name": "Isabela Boscov"
+    },
+    {
+     "id": "UCa8VCGFAY0yjDrexYFeVoYg",
+     "name": "Spikima Movies"
+    },
+    {
+     "id": "UCiSarBtpSphUrxtKDIW9c_A",
+     "name": "Meus 2 Centavos"
+    },
+    {
+     "id": "UCL8h3ri2WN_-IbviBlWtUcQ",
+     "name": "CinemaWins"
+    },
+    {
+     "id": "UC-hehDTvO4X8d9M7MVtpElg",
+     "name": "Seeing Through Our Screens - Thomas Flight"
+    },
+    {
+     "id": "UCP1iRaFlS5EYjJBryFV9JPw",
+     "name": "Looper"
+    },
+    {
+     "id": "UCJA-dDMFs59cslPrZdeQFYw",
+     "name": "The Gaze"
+    },
+    {
+     "id": "UCF1fG3gT44nGTPU2sVLoFWg",
+     "name": "Patrick (H) Willems"
+    },
+    {
+     "id": "UCUFoQUaVRt3MVFxqwPUMLCQ",
+     "name": "StudioBinder"
+    },
+    {
+     "id": "UCH_VqR5rFFhgjZmM31xA3Ag",
+     "name": "Accented Cinema"
+    },
+    {
+     "id": "UCHiwtz2tCEfS17N9A-WoSSw",
+     "name": "Pop Culture Detective"
+    },
+    {
+     "id": "UCyNtlmLB73-7gtlBz00XOQQ",
+     "name": "Folding Ideas"
+    },
+    {
+     "id": "UCWq-qJSudqKrzquTVep9Jwg",
+     "name": "The Royal Ocean Film Society"
+    },
+    {
+     "id": "UCVtL1edhT8qqY-j2JIndMzg",
+     "name": "CineFix"
+    },
+    {
+     "id": "UCAP57cF-FSjJKzzXg7ntPlQ",
+     "name": "The Criterion Collection"
+    },
+    {
+     "id": "UCuPivVjnfNo4mb3Oog_frZg",
+     "name": "A24"
+    },
+    {
+     "id": "UCb6-VM5UQ4Czj_d3m9EPGfg",
+     "name": "MUBI"
+    },
+    {
+     "id": "UCE8deXi-Eea3SuEV1Q1L4ug",
+     "name": "Super Oito (Otávio Ugá)"
+    },
+    {
+     "id": "UCcq1Xu3SKcwE1CpzGi-N68g",
+     "name": "Pipoca e Nanquim"
+    },
+    {
+     "id": "UCurl4RJpmlVmUJUiTWyGWAA",
+     "name": "Cinema com Rapadura"
+    },
+    {
+     "id": "UC2oZNzo6o37qejkFQE2dIAA",
+     "name": "Carol Moreira"
+    }
+   ],
+   "cover": "covers/cinema.png"
+  },
+  {
+   "name": "MUSIC",
+   "color": "#FFCC80",
+   "sources": [
+    {
+     "id": "UCnkp4xDOwqqJD7sSM3xdUiQ",
+     "name": "Adam Neely"
+    },
+    {
+     "id": "UC4PIiYewI1YGyiZvgNlJNrA",
+     "name": "Charles Cornell"
+    },
+    {
+     "id": "UC6ive94iS9wNekiENPrqfuQ",
+     "name": "Charlie Tran"
+    },
+    {
+     "id": "UCz2iUx-Imr6HgDC3zAFpjOw",
+     "name": "David Bennett Music Theory"
+    },
+    {
+     "id": "UCh-PyMficPzVAihCJkFJVAA",
+     "name": "David Bruce Composer"
+    },
+    {
+     "id": "UCgFvT6pUq9HLOvKBYERzXSQ",
+     "name": "Davie504"
+    },
+    {
+     "id": "UCFKJ7NEE5S76QYK696nXDfg",
+     "name": "Jeff Schneider"
+    },
+    {
+     "id": "UC8gGIw-shIcknbdMvwrcKRQ",
+     "name": "Levi McClain"
+    },
+    {
+     "id": "UC8yI8P7Zi3yYTsypera-IQg",
+     "name": "Music Matters"
+    },
+    {
+     "id": "UCbEFvUhe-QuH9-0Ksno9dwA",
+     "name": "Open Studio"
+    },
+    {
+     "id": "UCXkNod_JcH7PleOjwK_8rYQ",
+     "name": "Polyphonic"
+    },
+    {
+     "id": "UCaNd66xUJjX8VZT6AByVpiw",
+     "name": "Underrated Albums"
+    },
+    {
+     "id": "UCx4W6lrDsM4YIAvvw7bIhRg",
+     "name": "FindGreatestSongs"
+    },
+    {
+     "id": "UC5EEcOixvGwVFVsHXWYehHg",
+     "name": "Brad Harrison Music"
+    },
+    {
+     "id": "UCScM10LcXz8Aaj0KtfjcONg",
+     "name": "Matheus Luna Violonista"
+    },
+    {
+     "id": "UC5cx71NgsfQoCm4woyIekPA",
+     "name": "Som de Peso"
+    },
+    {
+     "id": "UCTYBfMmrxRVP2IYfVJIjWrQ",
+     "name": "Som no Sebo"
+    },
+    {
+     "id": "UC6jHLsPtVcYKW2jz5NH7ZuA",
+     "name": "Stereosfera"
+    },
+    {
+     "id": "UC5Gat6FdyiG5ydUUHqPTAEQ",
+     "name": "Tetragrammaton with Rick Rubin"
+    },
+    {
+     "id": "UCJquYOG5EL82sKTfH9aMA9Q",
+     "name": "Rick Beato"
+    },
+    {
+     "id": "UCdcemy56JtVTrsFIOoqvV8g",
+     "name": "Andrew Huang"
+    },
+    {
+     "id": "UC8R8FRt1KcPiR-rtAflXmeg",
+     "name": "Nahre Sol"
+    },
+    {
+     "id": "UCeZLO2VgbZHeDcongKzzfOw",
+     "name": "8-bit Music Theory"
+    },
+    {
+     "id": "UCl_dlV_7ofr4qeP1drJQ-qg",
+     "name": "Tantacrul"
+    },
+    {
+     "id": "UCTUtqcDkzw7bisadh6AOx5w",
+     "name": "12tone"
+    },
+    {
+     "id": "UC4ihNhN8iN9QPg2XTxiiPJw",
+     "name": "Inside the Score"
+    },
+    {
+     "id": "UCI_dcH8Zr2UqNT1EqvMNgTg",
+     "name": "Samuel Andreyev"
+    },
+    {
+     "id": "UCRDDHLvQb8HjE2r7_ZuNtWA",
+     "name": "Signals Music Studio"
+    },
+    {
+     "id": "UCi7l9chXMljpUft67vw78qw",
+     "name": "Sideways"
+    }
+   ],
+   "cover": "covers/music.png"
+  },
+  {
+   "name": "KIDS",
+   "color": "#EF9A9A",
+   "sources": [
+    {
+     "id": "UC-adUJnjdrRnRlOJGoDtTqw",
+     "name": "O Show da Luna!"
+    },
+    {
+     "id": "UCVn5t5VAQMBkVDb0vBqRFCg",
+     "name": "Vera e o Reino do Arco-Íris"
+    },
+    {
+     "id": "UCxTmdyNdj-s9t79UjVdLT_g",
+     "name": "Bluey Português Brasil - Canal Oficial"
+    },
+    {
+     "id": "UC4bG4HsFDLpm1qTPDqZFRgA",
+     "name": "A Casa Mágica da Gabby"
+    },
+    {
+     "id": "UCaxT_rQp11qQlHbnRIB--tw",
+     "name": "Peixonauta"
+    },
+    {
+     "id": "UCV4XcEqBswMCryorV_gNENw",
+     "name": "Turma da Mônica"
+    },
+    {
+     "id": "UCUSlBHsWpxrXz29_BFL9pvw",
+     "name": "Tainá e os Guardiões da Amazônia"
+    },
+    {
+     "id": "UCEnXFTwKRy4zSafAGPkooNA",
+     "name": "Pocoyo Português Brasil"
+    },
+    {
+     "id": "UC0uzSknyMFmFV6YrKyglYfQ",
+     "name": "Daniel Tigre em Português"
+    },
+    {
+     "id": "UCqRYGzyX5WlQem-h31EFpkQ",
+     "name": "Oi, Duggee Português Brasil"
+    },
+    {
+     "id": "UCvD9GB-E4q_TuMpwUtFBhLA",
+     "name": "Peppa Pig em Português Brasil"
+    },
+    {
+     "id": "UCZNV4_htB8Vw5oKogme3G_A",
+     "name": "Shaun, o Carneiro"
+    },
+    {
+     "id": "UCKmFiQlC5TLra_eqv_OUu3w",
+     "name": "Timmy Time"
+    },
+    {
+     "id": "UCM88mtSE0zRTn5ae4EbYcuw",
+     "name": "Pingu"
+    },
+    {
+     "id": "UC32cSEc3pqI1D9Fs_C-UbGQ",
+     "name": "Octonautas"
+    },
+    {
+     "id": "UCg3VS8afaNzH4EWJmMcdqMg",
+     "name": "George, o Curioso"
+    },
+    {
+     "id": "UCEb037xxHV2lV8NGt5hdPzA",
+     "name": "Zuzubalândia"
+    },
+    {
+     "id": "UCjhEPI7VpQ6WN0xq9XXrn6g",
+     "name": "O Diário de Mika"
+    },
+    {
+     "id": "UCGkLuQt34WUEc2FmHNvgdBQ",
+     "name": "Simon Super Coelho"
+    }
+   ],
+   "cover": "covers/kids.png"
+  },
+  {
+   "name": "KIDS EDU",
+   "color": "#5B9BE5",
+   "sources": [
+    {
+     "id": "UC0cGVh96osM7yqMu0ENSKKQ",
+     "name": "Mundo Bita"
+    },
+    {
+     "id": "UCGs6qb1ohFhDzeHbYeJlsAA",
+     "name": "Palavra Cantada Oficial"
+    },
+    {
+     "id": "UCtXVrEFdvdS5Gof7XWYw-CA",
+     "name": "Quintal da Cultura"
+    },
+    {
+     "id": "UCSTzvPF1Fti4v7DBc9WfJGA",
+     "name": "Castelo Rá-Tim-Bum"
+    },
+    {
+     "id": "UCA6Roeo-qFVk3jvjAdag7Uw",
+     "name": "Cocoricó"
+    },
+    {
+     "id": "UCg3F7JVu-hZ0uYh2E-qaQxA",
+     "name": "Vila Sésamo"
+    },
+    {
+     "id": "UCi4Cx0ySG8b2ihxTCemiC7A",
+     "name": "Meu AmigãoZão"
+    },
+    {
+     "id": "UCYKeu41LiJOIoyEkStWqCLw",
+     "name": "Smile and Learn - Português"
+    },
+    {
+     "id": "UCkup3lAYe6aCRyIIHQbIZWg",
+     "name": "Numberblocks em Português Brasil"
+    },
+    {
+     "id": "UC9fxSdFjcz5QWDEhYCk_k1w",
+     "name": "Fafá conta histórias"
+    },
+    {
+     "id": "UCWLNF6wlHEAin0kukYW0uow",
+     "name": "Ticolicos - Canal Infantil"
+    },
+    {
+     "id": "UCXo2rqv4LNLnwX11kfYsoig",
+     "name": "TV Escola"
+    },
+    {
+     "id": "UC2mmP8ysfyko40KSn90x6Og",
+     "name": "Canal Futura"
+    },
+    {
+     "id": "UCvUw2YgN8CBP12legyDqylg",
+     "name": "Leiturinha"
+    },
+    {
+     "id": "UCg1l4dRMIGqBP1LCBKXXrOg",
+     "name": "Tiquequê"
+    },
+    {
+     "id": "UCRl5s1eMLphAhGAmixoUsxA",
+     "name": "Grandes Pequeninos"
+    },
+    {
+     "id": "UCcSjSyFGLKclcFxcPKZuOlQ",
+     "name": "Bia Bedran"
+    },
+    {
+     "id": "UCzPvR5EslYq2S-BTmxZl_iQ",
+     "name": "Varal de Histórias"
+    },
+    {
+     "id": "UC8h3yl2rXdYuNekaoDyewXQ",
+     "name": "Ponto Ciência"
+    }
+   ],
+   "cover": "covers/kids-edu.png"
+  },
+  {
+   "name": "Games",
+   "color": "#E5484D",
+   "sources": [
+    {
+     "id": "UCqJ-Xo29CKyLTjn6z2XwYAw",
+     "name": "Game Maker's Toolkit"
+    },
+    {
+     "id": "UC0fDG3byEcMtbOqPMymDNbw",
+     "name": "Noclip"
+    },
+    {
+     "id": "UCE1jXbVAGJQEORz9nZqb5bQ",
+     "name": "Ahoy"
+    },
+    {
+     "id": "UCeTfBygNb1TahcNpZyELO8g",
+     "name": "Jacob Geller"
+    },
+    {
+     "id": "UC9PBzalIcEQCsiIkq36PyUA",
+     "name": "Digital Foundry"
+    },
+    {
+     "id": "UCWqr2tH3dPshNhPjV5h1xRw",
+     "name": "Super Bunnyhop"
+    },
+    {
+     "id": "UCm4JnxTxtvItQecKUc4zRhQ",
+     "name": "Errant Signal"
+    },
+    {
+     "id": "UCfHmyqCntYHQ81ZukNu66rg",
+     "name": "Razbuten"
+    },
+    {
+     "id": "UC4rqhyiTs7XyuODcECvuiiQ",
+     "name": "Scott The Woz"
+    },
+    {
+     "id": "UCH_7doiCkWeq0v3ycWE5lDw",
+     "name": "Any Austin"
+    },
+    {
+     "id": "UCZB6V9fUov0Mx_us3MWWILg",
+     "name": "People Make Games"
+    },
+    {
+     "id": "UCNOVwMpD-5A1xzcQGbIHNeA",
+     "name": "Design Doc"
+    },
+    {
+     "id": "UCv1DvRY5PyHHt3KN9ghunuw",
+     "name": "Masahiro Sakurai on Creating Games"
+    },
+    {
+     "id": "UCtUbO6rBht0daVIOGML3c8w",
+     "name": "Summoning Salt"
+    },
+    {
+     "id": "UCJfJWct8jN1RpCuVWk3zHTA",
+     "name": "Daryl Talks Games"
+    },
+    {
+     "id": "UCyS4xQE6DK4_p3qXQwJQAyA",
+     "name": "DidYouKnowGaming?"
+    },
+    {
+     "id": "UCwRqWnW5ZkVaP_lZF7caZ-g",
+     "name": "Retro Game Mechanics Explained"
+    },
+    {
+     "id": "UCnbvPS_rXp4PC21PG2k1UVg",
+     "name": "The Gaming Historian"
+    },
+    {
+     "id": "UCSdma21fnJzgmPodhC9SJ3g",
+     "name": "NakeyJakey"
+    },
+    {
+     "id": "UChIs72whgZI9w6d6FhwGGHA",
+     "name": "Gamers Nexus"
+    },
+    {
+     "id": "UCupqHNRTEHjNtq9X8djWyaQ",
+     "name": "Voxel"
+    },
+    {
+     "id": "UCUZfhX79dQrJvAgYefiXCCA",
+     "name": "Flow Games"
+    },
+    {
+     "id": "UCWKtHaeXVzUscYGcm0hEunw",
+     "name": "BRKsEDU"
+    },
+    {
+     "id": "UCuVIWETFdxzwlHEHMbhm2_w",
+     "name": "Zangado"
+    },
+    {
+     "id": "UCfg4PAgKIurlvYJRhhukv_g",
+     "name": "IGN Brasil"
+    },
+    {
+     "id": "UC5D4Z4yflDZ3_3B02ozo5jg",
+     "name": "Jogabilidade"
+    },
+    {
+     "id": "UCxDTv53CFzcdpUr2jlYWzFQ",
+     "name": "Overloadr"
+    },
+    {
+     "id": "UCuxfOdbKQy0tgGXcm9sjHiw",
+     "name": "Coisa de Nerd"
+    },
+    {
+     "id": "UCJAbkIY17zAmCTNQHH0bQoQ",
+     "name": "Gameplayrj"
+    }
+   ]
+  },
+  {
+   "name": "Esportes",
+   "color": "#3DD68C",
+   "sources": [
+    {
+     "id": "UCgCKagVhzGnZcuP9bSMgMCg",
+     "name": "ge"
+    },
+    {
+     "id": "UCw5-xj3AKqEizC7MvHaIPqA",
+     "name": "ESPN Brasil"
+    },
+    {
+     "id": "UCZiYbVptd3PVPf4f6eR6UaQ",
+     "name": "CazéTV"
+    },
+    {
+     "id": "UCs-6sCz2LJm1PrWQN4ErsPw",
+     "name": "TNT Sports Brasil"
+    },
+    {
+     "id": "UCFjrDmEnxrG5TRGVO0TPHLA",
+     "name": "Desimpedidos"
+    },
+    {
+     "id": "UCGYYNGmyhZ_kwBF_lqqXdAQ",
+     "name": "Tifo Football"
+    },
+    {
+     "id": "UCDRmGMSgrtZkOsh_NQl4_xw",
+     "name": "Secret Base"
+    },
+    {
+     "id": "UCEPKlFeUjRY_1mpZP8GnkVg",
+     "name": "COPA90"
+    },
+    {
+     "id": "UC3HPbvB6f58X_7SMIp6OPYw",
+     "name": "Thinking Basketball"
+    },
+    {
+     "id": "UCsiCOcr5SZAWlJMfcw9P__w",
+     "name": "NBA Brasil"
+    },
+    {
+     "id": "UCB_qr75-ydFVKSF9Dmo6izg",
+     "name": "Formula 1"
+    },
+    {
+     "id": "UCk8XGxi7fsTqQQRVq9LSraw",
+     "name": "UFC Brasil"
+    },
+    {
+     "id": "UCTl3QQTvqHFjurroKxexy2Q",
+     "name": "Olympics"
+    },
+    {
+     "id": "UChuLeaTGRcfzo0UjL-2qSbQ",
+     "name": "World Surf League"
+    },
+    {
+     "id": "UCYVzBg0lZawWoQRIMQ1dKQQ",
+     "name": "Red Bull Brasil"
+    },
+    {
+     "id": "UCYzfVBuCfGz-oF3aOCGgO5g",
+     "name": "Brett Kollmann"
+    },
+    {
+     "id": "UCjXIw1GlwaY1IzpW_jN9iCQ",
+     "name": "The Overlap"
+    },
+    {
+     "id": "UCwWgXewMHxlPkP5FkxoZvKQ",
+     "name": "Men in Blazers"
+    },
+    {
+     "id": "UC9OlHEgxoaY6QY6nWPoiqQg",
+     "name": "Grande Prêmio"
+    },
+    {
+     "id": "UCPHvx0NxJubMU8QqZ6X_Efw",
+     "name": "Charla Podcast"
+    },
+    {
+     "id": "UC0skDBBv--leL2rK_r9pmYw",
+     "name": "Placar"
+    },
+    {
+     "id": "UCPN-0-JKLaLbTVXb3mwbBVQ",
+     "name": "Trivela"
+    },
+    {
+     "id": "UCEOMB0FexwjN4ViZTZLFrkQ",
+     "name": "Band Sports"
+    },
+    {
+     "id": "UCUNoEsSfUcyNlaJbieYkMvg",
+     "name": "Jon Bois"
+    }
+   ]
+  }
+ ]
+}

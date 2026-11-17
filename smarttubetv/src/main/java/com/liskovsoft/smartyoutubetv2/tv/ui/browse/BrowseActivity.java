@@ -22,6 +22,14 @@ public class BrowseActivity extends LeanbackActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        // OpenTube: abre a grade de canais de TV por cima da tela principal
+        com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeActivity.openIfRequested(this);
+    }
+
+    @Override
     protected void initTheme() {
         int browseThemeResId = MainUIData.instance(this).getColorScheme().browseThemeResId;
         if (browseThemeResId > 0) {

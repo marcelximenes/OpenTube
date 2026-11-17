@@ -35,6 +35,7 @@ public class PlaybackActivity extends LeanbackActivity {
     private static final float GAMEPAD_TRIGGER_INTENSITY_OFF = 0.45f;
     private boolean gamepadTriggerPressed = false;
     private PlaybackFragment mPlaybackFragment;
+    private com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeOverlay mOpenTubeOverlay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,19 @@ public class PlaybackActivity extends LeanbackActivity {
         if (fragment instanceof PlaybackFragment) {
             mPlaybackFragment = (PlaybackFragment) fragment;
         }
+
+        // OpenTube: logo do canal de TV e painel de informações sobre o player
+        mOpenTubeOverlay = new com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeOverlay(this, mPlaybackFragment);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mOpenTubeOverlay != null) {
+            mOpenTubeOverlay.onResume();
+        }
+    }
+
 
     @Override
     protected void initTheme() {
@@ -57,6 +70,11 @@ public class PlaybackActivity extends LeanbackActivity {
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
+        // OpenTube: controle remoto do modo TV (OK = info, ←/→ = avançar/voltar, ↑/↓ = próximo/anterior)
+        if (mOpenTubeOverlay != null && mOpenTubeOverlay.dispatchKeyEvent(event)) {
+            return true;
+        }
+
         if (mPlaybackFragment != null) {
             mPlaybackFragment.onDispatchKeyEvent(event);
         }
@@ -206,6 +224,10 @@ public class PlaybackActivity extends LeanbackActivity {
 
         if (hasDialogBug || isScreenOff) {
             mPlaybackFragment.blockEngine(true);
+        }
+
+        if (mOpenTubeOverlay != null) {
+            mOpenTubeOverlay.onPause();
         }
 
         // Run the code before the contained fragment

@@ -560,6 +560,11 @@ public class VideoStateController extends BasePlayerController {
             }
         }
 
+        // OpenTube: vídeos dos canais de TV sempre começam do zero
+        if (item.openTubeFromZero) {
+            state = null;
+        }
+
         // Set actual position for live videos with uncommon length
         if (item.isLive && (state == null || state.durationMs - state.positionMs < Math.max(NEAR_LIVE_EDGE_MS, getLiveThresholdMs()))) {
             // Add buffer. Should I take into account segment offset???

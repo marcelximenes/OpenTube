@@ -58,6 +58,18 @@ public class MainApplication extends MultiDexApplication implements Configuratio
     public void onCreate() {
         super.onCreate();
 
+        // OpenTube: rede do player sempre por OkHttp com DNS IPv4. O Cronet (padrão) ignora a
+        // preferência de DNS, e em redes com IPv6 quebrado o vídeo empacava no começo.
+        // Feito antes de qualquer conexão, para não precisar reiniciar o app.
+        com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData openTubeTweaks =
+                com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData.instance(this);
+        if (openTubeTweaks.getPlayerDataSource() != com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData.PLAYER_DATA_SOURCE_OKHTTP) {
+            openTubeTweaks.setPlayerDataSource(com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData.PLAYER_DATA_SOURCE_OKHTTP);
+        }
+        if (openTubeTweaks.getPreferredDnsType() != com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData.DNS_TYPE_IPV4) {
+            openTubeTweaks.setPreferredDnsType(com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData.DNS_TYPE_IPV4);
+        }
+
         // ByeByeDPI fix
         // https://android-review.googlesource.com/c/platform/external/conscrypt/+/89408/
         // NOTE: Android 10+ (API 29+) uses system Conscrypt TLS; custom Security providers are unnecessary
@@ -114,6 +126,9 @@ public class MainApplication extends MultiDexApplication implements Configuratio
         viewManager.register(ChannelView.class, ChannelActivity.class, BrowseActivity.class);
         viewManager.register(ChannelUploadsView.class, ChannelUploadsActivity.class, BrowseActivity.class);
         viewManager.register(WebBrowserView.class, WebBrowserActivity.class, BrowseActivity.class);
+        // OpenTube: grade de canais de TV, aberta por cima da tela principal
+        viewManager.register(com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeView.class,
+                com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeActivity.class, BrowseActivity.class);
     }
 
     /**

@@ -17,6 +17,9 @@ public class SplashActivity extends MotherActivity implements SplashView {
 
         mNewIntent = getIntent();
 
+        // OpenTube: cada abertura do app mostra a grade de canais de TV
+        com.liskovsoft.smartyoutubetv2.tv.ui.opentube.OpenTubeActivity.requestOpenOnNextBrowse();
+
         mPresenter = SplashPresenter.instance(this);
         mPresenter.setView(this);
         mPresenter.onViewInitialized();

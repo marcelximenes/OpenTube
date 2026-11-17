@@ -164,7 +164,8 @@ android {
             targetSdkVersion project.properties.compileSdkVersion
         }
         ststable {
-            applicationId "org.smarttube.stable"
+            // OpenTube: id próprio para instalar ao lado do SmartTube original
+            applicationId "app.opentube"
             targetSdkVersion project.properties.compileSdkVersion
         }
         stfdroid {
