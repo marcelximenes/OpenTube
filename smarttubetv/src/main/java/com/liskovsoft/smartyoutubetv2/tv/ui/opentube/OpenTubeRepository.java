@@ -104,6 +104,15 @@ public final class OpenTubeRepository {
         return cached != null && !cached.isEmpty();
     }
 
+    /** Primeiro vídeo que o canal tocaria agora, ou null se a programação ainda não chegou. */
+    public String firstVideoId(TvChannel channel) {
+        if (!isReady(channel)) {
+            return null;
+        }
+        List<Entry> selected = select(channel, mCache.get(channel.name));
+        return selected.isEmpty() ? null : selected.get(0).videoId;
+    }
+
     public boolean isLoading(TvChannel channel) {
         return mPending.containsKey(channel.name);
     }

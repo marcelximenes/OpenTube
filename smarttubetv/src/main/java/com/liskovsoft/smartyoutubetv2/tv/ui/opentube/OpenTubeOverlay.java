@@ -110,6 +110,7 @@ public class OpenTubeOverlay {
     private boolean mOnButtons;
     private int mButtonIndex = BUTTON_PLAY; // ↓ cai no play, entre o anterior e o próximo
     private String mLastVideoId;
+    private static final long PREFETCH_AFTER_MS = 8_000;
     private String mAvatarUrl;
     private TvChannel mBugChannel;
     private int mTuneSession = -1;
@@ -119,6 +120,8 @@ public class OpenTubeOverlay {
     private boolean mSmartTubeUiRequested;
     private long mPendingSeekMs = -1;
     private String mShortSkippedId;
+    /** Vídeo para o qual o próximo da fila já foi pré-carregado. */
+    private String mPrefetchedAfter;
 
     private final Runnable mTick = new Runnable() {
         @Override
@@ -873,6 +876,16 @@ public class OpenTubeOverlay {
                 mSuppressSmartTubeUiUntil = SystemClock.uptimeMillis() + SUPPRESS_SMARTTUBE_UI_MS;
                 mFragment.skipToNext();
                 return;
+            }
+        }
+
+        // Tocando há uns segundos: busca já os dados do próximo, para "Próximo" e a troca automática
+        if (mFragment.isPlaying() && mFragment.getPositionMs() > PREFETCH_AFTER_MS
+                && !video.videoId.equals(mPrefetchedAfter)) {
+            mPrefetchedAfter = video.videoId;
+            Video next = com.liskovsoft.smartyoutubetv2.common.app.models.data.Playlist.instance().getNext();
+            if (next != null && OpenTubeSession.contains(next.videoId)) {
+                OpenTubePrefetch.video(next.videoId);
             }
         }
 

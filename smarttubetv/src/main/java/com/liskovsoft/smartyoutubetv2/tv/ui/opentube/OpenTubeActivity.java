@@ -32,6 +32,8 @@ import java.util.List;
 public class OpenTubeActivity extends LeanbackActivity {
     private static final int COLUMNS = 6;
     private static final float CARD_RADIUS_DP = 10;
+    private static final long PREFETCH_FOCUS_DELAY_MS = 600;
+    private static final long PREFETCH_RETRY_MS = 1000;
     private static boolean sOpenRequested;
 
     private List<TvChannel> mChannels;
@@ -244,6 +246,21 @@ public class OpenTubeActivity extends LeanbackActivity {
         private final TextView mName;
         private final View mRing;
         private TvChannel mChannel;
+        private final Runnable mPrefetch = new Runnable() {
+            @Override
+            public void run() {
+                if (mChannel == null || !itemView.hasFocus() || mOpening != null) {
+                    return;
+                }
+                String first = OpenTubeRepository.instance(itemView.getContext()).firstVideoId(mChannel);
+                if (first != null) {
+                    OpenTubePrefetch.video(first);
+                } else {
+                    // App recém-aberto: a programação ainda está chegando. Tenta de novo.
+                    itemView.postDelayed(this, PREFETCH_RETRY_MS);
+                }
+            }
+        };
         private boolean mAnimatedIn;
 
         ChannelHolder(Context context) {
@@ -306,6 +323,12 @@ public class OpenTubeActivity extends LeanbackActivity {
                 mRing.animate().alpha(hasFocus ? 1f : 0f).setDuration(OpenTubeStyle.DUR_MEDIUM_MS).start();
                 if (Build.VERSION.SDK_INT >= 21) {
                     v.setTranslationZ(hasFocus ? OpenTubeStyle.dp(v.getContext(), 10) : 0);
+                }
+                // Parou num canal: busca já os dados do primeiro vídeo dele (e, com o app recém-aberto,
+                // prepara o token do YouTube), para "sintonizar" mais rápido
+                v.removeCallbacks(mPrefetch);
+                if (hasFocus) {
+                    v.postDelayed(mPrefetch, PREFETCH_FOCUS_DELAY_MS);
                 }
             });
         }
