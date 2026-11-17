@@ -57,12 +57,15 @@ public class OpenTubeOverlay {
     private static final long TUNE_MAX_MS = 15_000;
     private static final long SUPPRESS_SMARTTUBE_UI_MS = 3000;
 
-    private static final int BUTTON_SUBTITLES = 0;
-    private static final int BUTTON_AUDIO = 1;
-    private static final int BUTTON_NEXT = 2;
-    private static final int BUTTON_MORE = 3;
-    private static final String[] BUTTON_LABELS = {"Legendas", "Áudio e dublagem", "Próximo vídeo", "Mais opções"};
-    private static final int[] BUTTON_ICONS = {R.drawable.ot_ic_subtitles, R.drawable.ot_ic_dub, R.drawable.ot_ic_next, R.drawable.ot_ic_more};
+    private static final int BUTTON_PLAY = 0;
+    private static final int BUTTON_SUBTITLES = 1;
+    private static final int BUTTON_AUDIO = 2;
+    private static final int BUTTON_NEXT = 3;
+    private static final int BUTTON_MORE = 4;
+    private static final String[] BUTTON_LABELS = {"Pausar", "Legendas", "Áudio e dublagem", "Próximo vídeo", "Mais opções"};
+    private static final int[] BUTTON_ICONS = {R.drawable.ot_ic_pause, R.drawable.ot_ic_subtitles, R.drawable.ot_ic_dub, R.drawable.ot_ic_next, R.drawable.ot_ic_more};
+    /** Vermelho da parte já vista da barra, como no YouTube. */
+    private static final int WATCHED = 0xFFFF0033;
 
     private final Activity mActivity;
     private final PlaybackFragment mFragment;
@@ -207,14 +210,14 @@ public class OpenTubeOverlay {
         timeline.addView(mTrack, trackParams);
 
         mFill = new View(context);
-        mFill.setBackground(OpenTubeStyle.rounded(context, OpenTubeStyle.BRAND, 2, 0, 0));
+        mFill.setBackground(OpenTubeStyle.rounded(context, WATCHED, 2, 0, 0));
         mFill.setPivotX(0);
         mFill.setScaleX(0f);
         mTrack.addView(mFill, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
         mKnob = new View(context);
         int knob = OpenTubeStyle.dp(context, 14);
-        mKnob.setBackground(OpenTubeStyle.circle(OpenTubeStyle.TEXT));
+        mKnob.setBackground(OpenTubeStyle.circle(WATCHED));
         mTrack.addView(mKnob, new FrameLayout.LayoutParams(knob, knob, Gravity.CENTER_VERTICAL));
 
         mTimeTotal = OpenTubeStyle.text(context, 12, OpenTubeStyle.TEXT_SECONDARY, true);
@@ -584,7 +587,12 @@ public class OpenTubeOverlay {
     private void togglePlay() {
         boolean play = !mFragment.getPlayWhenReady();
         mFragment.setPlayWhenReady(play);
-        flashCenterIcon(play ? R.drawable.ot_ic_play : R.drawable.ot_ic_pause);
+        if (play) {
+            flashCenterIcon(R.drawable.ot_ic_play);
+        } else {
+            holdCenterIcon(R.drawable.ot_ic_pause); // pausado: o ícone fica até continuar
+        }
+        updatePlayButton(play);
         showPlayer(SHOW_ON_KEY_MS);
         if (!play) {
             mHandler.removeCallbacks(mAutoHide); // pausado: fica na tela
@@ -617,6 +625,9 @@ public class OpenTubeOverlay {
                 .start();
 
         switch (index) {
+            case BUTTON_PLAY:
+                togglePlay();
+                break;
             case BUTTON_SUBTITLES:
                 showSubtitlesDrawer();
                 break;
@@ -1007,6 +1018,15 @@ public class OpenTubeOverlay {
         }
     }
 
+    private void holdCenterIcon(int iconRes) {
+        mCenterIcon.setImageResource(iconRes);
+        mCenterIcon.animate().cancel();
+        mCenterIcon.setScaleX(0.8f);
+        mCenterIcon.setScaleY(0.8f);
+        mCenterIcon.animate().alpha(1f).scaleX(1f).scaleY(1f).setStartDelay(0)
+                .setDuration(OpenTubeStyle.DUR_MEDIUM_MS).setInterpolator(OpenTubeStyle.SPRING).start();
+    }
+
     private void flashCenterIcon(int iconRes) {
         mCenterIcon.setImageResource(iconRes);
         mCenterIcon.animate().cancel();
@@ -1029,7 +1049,23 @@ public class OpenTubeOverlay {
                 .withEndAction(() -> mSeekBubble.animate().setStartDelay(0)).start();
     }
 
+    /** Ícone do primeiro botão: pausa quando está tocando, play quando está pausado. */
+    private void updatePlayButton(boolean playing) {
+        int icon = playing ? R.drawable.ot_ic_pause : R.drawable.ot_ic_play;
+        Object current = mButtons[BUTTON_PLAY].getTag();
+        if (current instanceof Integer && (Integer) current == icon) {
+            return;
+        }
+        mButtons[BUTTON_PLAY].setTag(icon);
+        mButtons[BUTTON_PLAY].setImageResource(icon);
+        BUTTON_LABELS[BUTTON_PLAY] = playing ? "Pausar" : "Continuar";
+        if (mOnButtons && mButtonIndex == BUTTON_PLAY) {
+            mButtonCaption.setText(BUTTON_LABELS[BUTTON_PLAY]);
+        }
+    }
+
     private void updateInfo(Video video, boolean texts) {
+        updatePlayButton(mFragment.getPlayWhenReady());
         if (texts) {
             TvChannel channel = OpenTubeSession.getChannel();
             String author = video.author != null ? video.author : "";
