@@ -99,6 +99,8 @@ public final class Video {
     public boolean isShuffled;
     /** OpenTube: sempre começa do zero, ignorando a posição salva */
     public boolean openTubeFromZero;
+    /** OpenTube: quando o canal de TV entrou no ar. Posição salva antes disso é ignorada (começa do zero). */
+    public long openTubeSince;
     /** OpenTube: foto do canal do YouTube (vem dos metadados do vídeo) */
     public String openTubeAuthorImageUrl;
     public String searchQuery;

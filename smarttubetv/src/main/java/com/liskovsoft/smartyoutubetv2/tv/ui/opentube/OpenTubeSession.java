@@ -46,7 +46,9 @@ public final class OpenTubeSession {
 
         // A programação já vem sem os vistos (OpenTubeHistory): começa sempre do primeiro
         List<Video> ordered = new ArrayList<>(videos.size());
+        long now = System.currentTimeMillis();
         for (Video video : videos) {
+            video.openTubeSince = now;
             video.openTubeFromZero = true;
             video.fromQueue = false;
             ordered.add(video);

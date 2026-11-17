@@ -77,6 +77,9 @@ public class SabrProcessor {
     private final Map<Integer, MediaHeader> initializedFormats;
     private final FormatSelector emptySelector;
     private SabrStreamError fatalError;
+    /** OpenTube: respostas seguidas com ATTESTATION_PENDING e sem nenhum vídeo. */
+    private int pendingWithoutMedia;
+    private static final int MAX_PENDING_WITHOUT_MEDIA = 2;
 
     public SabrProcessor(
             @NonNull String videoPlaybackUstreamerConfig,
@@ -157,6 +160,12 @@ public class SabrProcessor {
     }
 
     public ProcessMediaHeaderResult processMediaHeader(MediaHeader mediaHeader) {
+        // OpenTube: chegou vídeo, então o "pendente" não está travando nada
+        pendingWithoutMedia = 0;
+        if (fatalError instanceof SabrPoTokenError && streamProtectionStatus == Status.ATTESTATION_PENDING) {
+            fatalError = null;
+        }
+
         if (mediaHeader.hasVideoId() && videoId != null && !Helpers.equals(mediaHeader.getVideoId(), videoId)) {
             throw new SabrStreamError(
                     String.format("Received unexpected MediaHeader for video %s (expecting %s)", mediaHeader.getVideoId(), videoId));
@@ -452,10 +461,20 @@ public class SabrProcessor {
         }
 
         // NOTE: PoToken attestation may fail a few times before passing, so a failure isn't proof it won't succeed.
-        // OpenTube: ATTESTATION_PENDING é o YouTube ainda conferindo o token, e o vídeo continua vindo.
-        // Tratar como fatal mostrava "erro inesperado PoToken error: PENDING" e recarregava o vídeo à toa.
-        // Só ATTESTATION_REQUIRED (token recusado ou ausente) interrompe.
-        this.fatalError = status == Status.ATTESTATION_REQUIRED ? new SabrPoTokenError("PoToken error: " + resultStatus) : null;
+        // OpenTube: ATTESTATION_PENDING nos primeiros ~60 s vem junto com o vídeo (o YouTube ainda confere o token).
+        // Tratar isso como fatal dava "erro inesperado" e recarregava à toa. Mas, passada essa janela, o servidor
+        // pode seguir "pendente" sem mandar vídeo: aí o player trava. Então o pendente só é fatal depois de
+        // MAX_PENDING_WITHOUT_MEDIA respostas seguidas sem vídeo (processMediaHeader zera a conta).
+        // O erro fatal faz o ErrorFixerController trocar de cliente e recarregar.
+        boolean fatal;
+        if (status == Status.ATTESTATION_PENDING) {
+            pendingWithoutMedia++;
+            fatal = pendingWithoutMedia >= MAX_PENDING_WITHOUT_MEDIA;
+        } else {
+            pendingWithoutMedia = 0;
+            fatal = status != Status.OK;
+        }
+        this.fatalError = fatal ? new SabrPoTokenError("PoToken error: " + resultStatus) : null;
 
         return result;
     }

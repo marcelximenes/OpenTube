@@ -560,9 +560,11 @@ public class VideoStateController extends BasePlayerController {
             }
         }
 
-        // OpenTube: vídeos dos canais de TV sempre começam do zero
+        // OpenTube: vídeos dos canais de TV começam do zero. Mas, se o player recarregar no meio
+        // (erro, troca de cliente), volta para onde estava: vale a posição salva depois que o canal entrou no ar.
         if (item.openTubeFromZero) {
-            state = null;
+            State local = getStateService().getByVideoId(item.videoId);
+            state = local != null && local.timestamp >= item.openTubeSince ? local : null;
         }
 
         // Set actual position for live videos with uncommon length
