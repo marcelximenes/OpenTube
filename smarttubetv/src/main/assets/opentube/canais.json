@@ -299,7 +299,8 @@
     }
    ],
    "cover": "covers/lofi.png",
-   "minMinutes": 20
+   "minMinutes": 20,
+   "maxMinutes": 120
   },
   {
    "name": "SESSIONS",
@@ -833,6 +834,10 @@
      "name": "Parabólica"
     },
     {
+     "id": "UCjP-MiAEn9DPvUHNyGEs7Wg",
+     "name": "hochelaga"
+    },
+    {
      "id": "UCZwU2G-KVl-P-O-B35chZOQ",
      "name": "History Hit"
     },
@@ -981,6 +986,14 @@
      "name": "Geography Now"
     },
     {
+     "id": "UCXQbZmsuSr3ndvN8NGlo7oQ",
+     "name": "Sam Bentley"
+    },
+    {
+     "id": "UC7KbIaEOuY7H2j-cvhJ3mYA",
+     "name": "Sam Ellis"
+    },
+    {
      "id": "UCG1h-Wqjtwz7uUANw6gazRw",
      "name": "Lindsay Ellis"
     },
@@ -1121,6 +1134,10 @@
      "name": "Art Prof"
     },
     {
+     "id": "UC2wzdLAx71DSQ4Mnq3anbVQ",
+     "name": "goblish"
+    },
+    {
      "id": "UCVDro8TZ8GiEj3B0RXBZhHw",
      "name": "HENI Talks"
     },
@@ -1141,7 +1158,7 @@
    "minMinutes": 5
   },
   {
-   "name": "Plato TV",
+   "name": "FUCK.",
    "color": "#F78C6C",
    "sources": [
     {
@@ -1261,6 +1278,10 @@
      "name": "Mario Sergio Cortella"
     },
     {
+     "id": "UC3OA1M34StuW8jhZFSXd2Jw",
+     "name": "Asangoham"
+    },
+    {
      "id": "UC7q-GcHyjCHkTpXCUTLzy7Q",
      "name": "Philosophy Overdose"
     },
@@ -1281,7 +1302,7 @@
      "name": "Philosophies for Life"
     }
    ],
-   "cover": "covers/plato-tv.png",
+   "cover": "covers/fuck.png",
    "minMinutes": 8
   },
   {
@@ -1545,6 +1566,10 @@
      "name": "Carol Moreira"
     },
     {
+     "id": "UCQMWt5A37rLyrNeXLldy1YQ",
+     "name": "Bhan"
+    },
+    {
      "id": "UCWTFGPpNQ0Ms6afXhaWDiRw",
      "name": "Now You See It"
     },
@@ -1677,6 +1702,10 @@
      "name": "Sideways"
     },
     {
+     "id": "UCXM1MEhOuzWOt9m5-EpYtow",
+     "name": "Deejay Alex Paz"
+    },
+    {
      "id": "UCDKiHSPstsj0silp519gt6w",
      "name": "Hack Music Theory"
     },
@@ -1775,6 +1804,10 @@
     {
      "id": "UCGkLuQt34WUEc2FmHNvgdBQ",
      "name": "Simon Super Coelho"
+    },
+    {
+     "id": "UCxmK61Geo08axWQP_BPdvlw",
+     "name": "Nick Jr. em Português"
     },
     {
      "id": "UCb7mSDa6UVj6ZEbvpd8_iyg",
@@ -2027,6 +2060,7 @@
      "name": "Timothy Cain"
     }
    ],
+   "cover": "covers/games.png",
    "minMinutes": 8
   },
   {
