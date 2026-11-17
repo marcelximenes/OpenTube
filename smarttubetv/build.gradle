@@ -109,6 +109,10 @@ android {
 
             if (keystorePropertiesFile.exists()) {
                 signingConfig signingConfigs.release
+            } else {
+                // OpenTube: sem keystore própria, assina o release com a chave de debug
+                // (mesma assinatura do APK debug, então instala por cima)
+                signingConfig signingConfigs.debug
             }
         }
         // Use same key for release and debug for testing

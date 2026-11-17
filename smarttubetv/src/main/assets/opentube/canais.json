@@ -124,6 +124,18 @@
     {
      "id": "UCuVLG9pThvBABcYCm7pkNkA",
      "name": "Climate Town"
+    },
+    {
+     "id": "UCr4AhknGUXAfGikkwm5kamg",
+     "name": "Nomad Architecture"
+    },
+    {
+     "id": "UC8D_dpBTc_iSF4VeVb5xO5Q",
+     "name": "Casa Vogue Brasil"
+    },
+    {
+     "id": "UCQbdsX9AVd8sF35p8825NcQ",
+     "name": "Doma Arquitetura"
     }
    ],
    "cover": "covers/arch3.png"
@@ -203,6 +215,14 @@
     {
      "id": "UCSpFnDQr88xCZ80N-X7t0nQ",
      "name": "Corridor Crew"
+    },
+    {
+     "id": "UC-1rx8j9Ggp8mp4uD0ZdEIA",
+     "name": "TheCGBros"
+    },
+    {
+     "id": "UC01mmiVp1IlMyI1xrGGlZVg",
+     "name": "Futurices"
     }
    ],
    "cover": "covers/scifi.png"
@@ -286,6 +306,10 @@
     {
      "id": "UCyD59CI7beJDU493glZpxgA",
      "name": "lofi geek"
+    },
+    {
+     "id": "UCKdURsjh1xT1vInYBy82n6g",
+     "name": "Chill with Taiki"
     }
    ],
    "cover": "covers/lofi.png"
@@ -409,6 +433,26 @@
     {
      "id": "UCqeIY2maSa-UhdbEs35CC-A",
      "name": "Música de Bolso"
+    },
+    {
+     "id": "UCCpd6qvE03uwMqoHwMfulSg",
+     "name": "WFUV Public Radio"
+    },
+    {
+     "id": "UCtfY_BnjiUnsGrnVZc2B8vw",
+     "name": "opbmusic"
+    },
+    {
+     "id": "UCAKcSON6PSG_JkTbXh2WdIg",
+     "name": "The Current"
+    },
+    {
+     "id": "UCdjZk4tVh36cykHUWBWnR4w",
+     "name": "BalconyTV"
+    },
+    {
+     "id": "UCpusLWatNrjslOgnMdKLHbw",
+     "name": "Stripped Sessions"
     }
    ],
    "cover": "covers/sessions.png"
@@ -512,6 +556,22 @@
     {
      "id": "UCdgUN8rX3SEb9L7FDub3I6A",
      "name": "Design Theory"
+    },
+    {
+     "id": "UCS1gMhu2KgHqW4OunIAaKrA",
+     "name": "P A N T E R"
+    },
+    {
+     "id": "UCON_D83JvdS-AQ6ihiXELpw",
+     "name": "Jesse Nyberg"
+    },
+    {
+     "id": "UC-LWed_VhTBD3SWtfyPqeNQ",
+     "name": "Q28a™ // Graphic Design"
+    },
+    {
+     "id": "UCNHpp-PPCb8Il11AMaAhvPQ",
+     "name": "Graphic Design with Elena"
     }
    ],
    "cover": "covers/dsgn.png"
@@ -643,6 +703,14 @@
     {
      "id": "UCdmGjywrxeOPfC7vDllmSgQ",
      "name": "TecMundo"
+    },
+    {
+     "id": "UC5Dz4kcUT2hx3_Nped-ZF1w",
+     "name": "Em Análise"
+    },
+    {
+     "id": "UC1L_jbFKsmzqPzBhTSfL_9g",
+     "name": "Explaining Tech Like You're Five"
     }
    ],
    "cover": "covers/tech-no-logic.png"
@@ -770,6 +838,22 @@
     {
      "id": "UCWdGgeyOnCOGnvhNdbVl1dQ",
      "name": "Gazeta do Povo"
+    },
+    {
+     "id": "UCy3eOZh9n5P3aWWKXmrq6yg",
+     "name": "PHVox Geopolitics Made Clear"
+    },
+    {
+     "id": "UCkVBx-XpEXAgWHX5-P1hl-A",
+     "name": "HENI OZI CUKIER"
+    },
+    {
+     "id": "UCWeEPkVspei8apARZXTIY5Q",
+     "name": "Martina Giovanetti"
+    },
+    {
+     "id": "UCggGlbdDcfJtXgBzQcygHEg",
+     "name": "Geopolítica Mundial"
     }
    ],
    "cover": "covers/politik.png"
@@ -897,8 +981,21 @@
     {
      "id": "UC_Lnb8ZHqqgLbp-7hltuT9w",
      "name": "CNA Insider"
+    },
+    {
+     "id": "UCW39zufHfsuGgpLviKh297Q",
+     "name": "DW Documentary"
+    },
+    {
+     "id": "UClz-d22g9Lj7agZSbaRKuqA",
+     "name": "Unreported World"
+    },
+    {
+     "id": "UCUmEPYxmnyQDeRUcFkslmQw",
+     "name": "Euronews em Português"
     }
-   ]
+   ],
+   "cover": "covers/news.png"
   },
   {
    "name": "History",
@@ -1011,6 +1108,26 @@
     {
      "id": "UCeLwY_iqGhtq3AIdAEvT9-g",
      "name": "Parabólica"
+    },
+    {
+     "id": "UCZwU2G-KVl-P-O-B35chZOQ",
+     "name": "History Hit"
+    },
+    {
+     "id": "UC88lvyJe7aHZmcvzvubDFRg",
+     "name": "Timeline - World History Documentaries"
+    },
+    {
+     "id": "UCV-yCAXMS-nWrHtORuDfSuQ",
+     "name": "Odyssey - Ancient History Documentaries"
+    },
+    {
+     "id": "UCOk2CgtW_euf-9w34fnYQnA",
+     "name": "Chronicle - Medieval History Documentaries"
+    },
+    {
+     "id": "UC11MjaCTJzTdTYhePzxNdRQ",
+     "name": "Unearthed History - Archaeology Documentaries"
     }
    ],
    "cover": "covers/history.png"
@@ -1142,8 +1259,21 @@
     {
      "id": "UCmmPgObSUPw1HL2lq6H4ffA",
      "name": "Geography Now"
+    },
+    {
+     "id": "UCG1h-Wqjtwz7uUANw6gazRw",
+     "name": "Lindsay Ellis"
+    },
+    {
+     "id": "UCVHxJghKAB_kA_5LMM8MD3w",
+     "name": "oliSUNvia"
+    },
+    {
+     "id": "UCniXurp_3xcDh923eiqGX3w",
+     "name": "Rowan Ellis"
     }
-   ]
+   ],
+   "cover": "covers/entertainment.png"
   },
   {
    "name": "Art",
@@ -1264,6 +1394,22 @@
     {
      "id": "UCG19ZyhUNbkPzU105yq8Rgw",
      "name": "Art Prof"
+    },
+    {
+     "id": "UCVDro8TZ8GiEj3B0RXBZhHw",
+     "name": "HENI Talks"
+    },
+    {
+     "id": "UC416BswuE2ItX23GySxZcRQ",
+     "name": "National Gallery of Art"
+    },
+    {
+     "id": "UCyGgRLbgcXjON9ZS5DaqMOQ",
+     "name": "Daria Callie"
+    },
+    {
+     "id": "UCTen32MLA_CbfSH2SuMEdNw",
+     "name": "Paintings by Dusan"
     }
    ],
    "cover": "covers/art.png"
@@ -1387,6 +1533,26 @@
     {
      "id": "UCyTS929PXJSUiBEFSzdypgg",
      "name": "Mario Sergio Cortella"
+    },
+    {
+     "id": "UC7q-GcHyjCHkTpXCUTLzy7Q",
+     "name": "Philosophy Overdose"
+    },
+    {
+     "id": "UCIq2xNjGAof0cCUaKbco6HQ",
+     "name": "Theory & Philosophy"
+    },
+    {
+     "id": "UC738SsV6BSLUVvMgKnEFFzQ",
+     "name": "Epoch Philosophy"
+    },
+    {
+     "id": "UCDdb7du-0SpNTFLvwet1zvQ",
+     "name": "Filosofia Total"
+    },
+    {
+     "id": "UCp1mRTkVlqDnxz_9S0YD9YQ",
+     "name": "Philosophies for Life"
     }
    ],
    "cover": "covers/plato-tv.png"
@@ -1518,6 +1684,22 @@
     {
      "id": "UCvBqzzvUBLCs8Y7Axb-jZew",
      "name": "Sixty Symbols"
+    },
+    {
+     "id": "UC0cd_-e49hZpWLH3UIwoWRA",
+     "name": "Professor Dave Explains"
+    },
+    {
+     "id": "UC4iI8T1vfJuLDnHlAzBta1g",
+     "name": "Portal da Ciência"
+    },
+    {
+     "id": "UCGfFUc6eWxfbtjYeun6r9xg",
+     "name": "FloatHeadPhysics"
+    },
+    {
+     "id": "UCJ0yBou72Lz9fqeMXh9mkog",
+     "name": "Physics Videos by Eugene Khutoryansky"
     }
    ],
    "cover": "covers/science.png"
@@ -1633,6 +1815,18 @@
     {
      "id": "UC2oZNzo6o37qejkFQE2dIAA",
      "name": "Carol Moreira"
+    },
+    {
+     "id": "UCWTFGPpNQ0Ms6afXhaWDiRw",
+     "name": "Now You See It"
+    },
+    {
+     "id": "UCRwkS2IUcBGBFzzw29W80zQ",
+     "name": "Film Herald"
+    },
+    {
+     "id": "UCCYCzL7IuMho0bHYYJ3Cuyw",
+     "name": "Dalenogare Críticas"
     }
    ],
    "cover": "covers/cinema.png"
@@ -1756,6 +1950,18 @@
     {
      "id": "UCi7l9chXMljpUft67vw78qw",
      "name": "Sideways"
+    },
+    {
+     "id": "UCDKiHSPstsj0silp519gt6w",
+     "name": "Hack Music Theory"
+    },
+    {
+     "id": "UC5edtZAO_1Ay2Gu0UxdJcEQ",
+     "name": "Music Theory for Gamers"
+    },
+    {
+     "id": "UCR1ATYyCJML6dxqgQhwIKZg",
+     "name": "Cadence Hira"
     }
    ],
    "cover": "covers/music.png"
@@ -1839,6 +2045,22 @@
     {
      "id": "UCGkLuQt34WUEc2FmHNvgdBQ",
      "name": "Simon Super Coelho"
+    },
+    {
+     "id": "UCb7mSDa6UVj6ZEbvpd8_iyg",
+     "name": "Discovery Kids Brasil"
+    },
+    {
+     "id": "UC0swV9nG3EZQ5EXqTHIj59A",
+     "name": "Chip and Potato Português - WildBrain"
+    },
+    {
+     "id": "UCKO0fe4t-F30xqtU6Wxth-g",
+     "name": "Garagem do Gecko - Desenhos Animados em Português"
+    },
+    {
+     "id": "UCmmTidkJ5TEydIWd-GcLiJQ",
+     "name": "Detetive Labrador - Desenhos Infantis"
     }
    ],
    "cover": "covers/kids.png"
@@ -1922,6 +2144,18 @@
     {
      "id": "UC8h3yl2rXdYuNekaoDyewXQ",
      "name": "Ponto Ciência"
+    },
+    {
+     "id": "UCueQ1eON-Ut21pSXcYJX6_g",
+     "name": "Mais Ciências - Profa Rafaela Lima"
+    },
+    {
+     "id": "UC6nj9J2MQDI9Sd60mVK1s-w",
+     "name": "ALFABRINCA"
+    },
+    {
+     "id": "UCOY8zbKjmPHYdyDcIFrhzrg",
+     "name": "Blippi Brasil - Desenhos Animados Educativos"
     }
    ],
    "cover": "covers/kids-edu.png"
@@ -2045,6 +2279,18 @@
     {
      "id": "UCJAbkIY17zAmCTNQHH0bQoQ",
      "name": "Gameplayrj"
+    },
+    {
+     "id": "UC0JB7TSe49lg56u6qH8y_MQ",
+     "name": "GDC Festival of Gaming"
+    },
+    {
+     "id": "UCXso4Ho8UARhzS3I_LOVTKA",
+     "name": "Cogumelando Videogame"
+    },
+    {
+     "id": "UCTAfm-YD2M9xzvbYvRc5ttA",
+     "name": "Timothy Cain"
     }
    ]
   },
@@ -2147,8 +2393,87 @@
     {
      "id": "UCUNoEsSfUcyNlaJbieYkMvg",
      "name": "Jon Bois"
+    },
+    {
+     "id": "UCFY0YHhxiIQWYYsLgeUBcbg",
+     "name": "Football Made Simple"
+    },
+    {
+     "id": "UCjbnazLwevrhQxGfbws_VmQ",
+     "name": "Futebol Máximo"
+    },
+    {
+     "id": "UCAxgscMlhkwgr0PK2Y-jz3w",
+     "name": "Categoria Canal"
+    },
+    {
+     "id": "UCJVU1UGN-YtwnAartLDdpIw",
+     "name": "Nonstop"
+    },
+    {
+     "id": "UC8C8WuWSsFjWFaTHcUQeQxA",
+     "name": "VICE Sports"
     }
    ]
+  },
+  {
+   "name": "Nature",
+   "color": "#F2C94C",
+   "sources": [
+    {
+     "id": "UCwmZiChSryoWQCZMIQezgTg",
+     "name": "BBC Earth"
+    },
+    {
+     "id": "UCDPk9MG2RexnOMGTD-YnSnA",
+     "name": "Nat Geo Animals"
+    },
+    {
+     "id": "UCQtW2oz8ec8pHjjxawujNjg",
+     "name": "Free Documentary - Nature"
+    },
+    {
+     "id": "UC95bEkaIgwhxSjSsdMFXYGg",
+     "name": "Scenic Relaxation"
+    },
+    {
+     "id": "UCKV_9NXnNbCpI19w22ucd3A",
+     "name": "Scenic Nature Relaxation"
+    },
+    {
+     "id": "UC4lp9Emg1ci8eo2eDkB-Tag",
+     "name": "Nature Relaxation Films"
+    },
+    {
+     "id": "UCPotnGNahFjLWjfsq4KYvuQ",
+     "name": "Relaxation Film"
+    },
+    {
+     "id": "UCg72Hd6UZAgPBAUZplnmPMQ",
+     "name": "4K Relaxation Channel"
+    },
+    {
+     "id": "UCbDH6Ga-wuaam2IHqAxm3hg",
+     "name": "Drone Snap"
+    },
+    {
+     "id": "UCcBp_9YPyma4c3HTadmRJ3Q",
+     "name": "Nature on PBS"
+    },
+    {
+     "id": "UC-he8--TRguZ-nNUSiH77Uw",
+     "name": "Relaxation Windows 4K Nature"
+    },
+    {
+     "id": "UCrUux5FxN8fw51FcQ5lTzQw",
+     "name": "EPIC WALK BEACH"
+    },
+    {
+     "id": "UChtaACvZXcYub5ZalCsLK6Q",
+     "name": "Walk in Brazil"
+    }
+   ],
+   "cover": "covers/nature.png"
   }
  ]
 }

@@ -102,7 +102,9 @@ final class OpenTubeCovers {
             }
         }
         Bitmap bitmap = null;
-        try (InputStream input = context.getAssets().open(path)) {
+        // Capa enviada pelo PC (files/opentube/covers) vale mais que a embutida no APK
+        java.io.File pushed = new java.io.File(context.getFilesDir(), path);
+        try (InputStream input = pushed.exists() ? new java.io.FileInputStream(pushed) : context.getAssets().open(path)) {
             bitmap = BitmapFactory.decodeStream(input);
         } catch (Exception e) {
             e.printStackTrace();

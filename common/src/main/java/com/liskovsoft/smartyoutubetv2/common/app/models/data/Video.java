@@ -99,6 +99,8 @@ public final class Video {
     public boolean isShuffled;
     /** OpenTube: sempre começa do zero, ignorando a posição salva */
     public boolean openTubeFromZero;
+    /** OpenTube: foto do canal do YouTube (vem dos metadados do vídeo) */
+    public String openTubeAuthorImageUrl;
     public String searchQuery;
     private int startSegmentNum;
     private long liveDurationMs = -1;
@@ -769,6 +771,9 @@ public final class Video {
             description = metadata.getDescription();
         }
         channelId = metadata.getChannelId();
+        if (metadata.getAuthorImageUrl() != null) {
+            openTubeAuthorImageUrl = metadata.getAuthorImageUrl(); // OpenTube
+        }
         nextMediaItem = findNextVideo(metadata);
         shuffleMediaItem = metadata.getShuffleVideo();
         playlistInfo = metadata.getPlaylistInfo();

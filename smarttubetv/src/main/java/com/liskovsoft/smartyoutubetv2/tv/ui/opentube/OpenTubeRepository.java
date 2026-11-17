@@ -237,7 +237,7 @@ public final class OpenTubeRepository {
     }
 
     private File diskFile(TvChannel channel) {
-        File dir = new File(mContext.getFilesDir(), "opentube");
+        File dir = new File(mContext.getFilesDir(), "opentube/programacao");
         //noinspection ResultOfMethodCallIgnored
         dir.mkdirs();
         return new File(dir, channel.name.toLowerCase().replaceAll("[^a-z0-9]+", "-") + ".json");

@@ -45,7 +45,7 @@ public final class TvChannel {
         List<TvChannel> result = new ArrayList<>();
 
         try {
-            JSONObject root = new JSONObject(readAsset(context, ASSET_PATH));
+            JSONObject root = new JSONObject(readList(context));
             JSONArray channels = root.getJSONArray("channels");
 
             for (int i = 0; i < channels.length(); i++) {
@@ -105,8 +105,25 @@ public final class TvChannel {
         return builder.toString();
     }
 
-    private static String readAsset(Context context, String path) throws Exception {
-        InputStream input = context.getAssets().open(path);
+    /**
+     * A lista enviada pelo PC (curadoria.html, via adb) fica em files/opentube/canais.json
+     * e vale mais que a embutida no APK. Assim dá para atualizar os canais sem recompilar.
+     */
+    private static String readList(Context context) throws Exception {
+        java.io.File pushed = new java.io.File(context.getFilesDir(), ASSET_PATH);
+        if (pushed.exists() && pushed.length() > 0) {
+            try {
+                String content = read(new java.io.FileInputStream(pushed));
+                new JSONObject(content); // valida antes de usar
+                return content;
+            } catch (Exception e) {
+                e.printStackTrace(); // arquivo enviado com problema: usa o embutido
+            }
+        }
+        return read(context.getAssets().open(ASSET_PATH));
+    }
+
+    private static String read(InputStream input) throws Exception {
         try {
             ByteArrayOutputStream output = new ByteArrayOutputStream();
             byte[] buffer = new byte[8192];
