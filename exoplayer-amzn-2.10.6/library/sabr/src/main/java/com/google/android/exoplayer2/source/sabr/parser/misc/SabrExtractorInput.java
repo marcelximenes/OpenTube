@@ -5,6 +5,7 @@ import com.google.android.exoplayer2.extractor.ExtractorInput;
 import com.google.android.exoplayer2.source.sabr.parser.SabrStream;
 import com.google.android.exoplayer2.source.sabr.parser.exceptions.SabrReloadPlayerError;
 import com.google.android.exoplayer2.source.sabr.parser.exceptions.SabrBackoffError;
+import com.google.android.exoplayer2.source.sabr.parser.exceptions.SabrPoTokenError;
 import com.google.android.exoplayer2.source.sabr.parser.parts.MediaSegmentDataSabrPart;
 import com.google.android.exoplayer2.source.sabr.parser.parts.RefreshPlayerResponseSabrPart;
 import com.google.android.exoplayer2.source.sabr.parser.parts.SabrPart;
@@ -187,6 +188,15 @@ public final class SabrExtractorInput implements ExtractorInput {
             }
 
             if (sabrPart == null) {
+                // OpenTube: token pendente e o servidor parou de mandar vídeo (acontece perto de 1:00).
+                // O erro do processador só era lido pelo maybeThrowError(), que o ExoPlayer não chama
+                // enquanto o carregador está ocupado; e ele fica ocupado, pedindo de novo a cada 2 s.
+                // O player ficava parado uns 40 s até um recarregamento. Lançar aqui manda o erro
+                // direto para o ErrorFixerController, que troca de cliente e retoma do mesmo ponto.
+                if (sabrStream.getFatalError() instanceof SabrPoTokenError) {
+                    throw sabrStream.getFatalError();
+                }
+
                 // The stream ended. If the server told us to back off, honor it instead of
                 // re-requesting immediately - otherwise we burn exactly the waiting period the server asked for.
                 int backoffMs = sabrStream.getBackoffTimeMs();
