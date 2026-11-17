@@ -37,12 +37,13 @@ import java.util.Set;
 /**
  * OpenTube: player próprio sobre o player do SmartTube, ativo só nos vídeos de um canal de TV.
  * <ul>
- *     <li>Canto superior direito: nome e capa do canal de TV (quadradinho).</li>
+ *     <li>Canto superior direito: só a capa do canal de TV (quadradinho), sem o nome.</li>
  *     <li>Ao entrar num canal: tela "sintonizando" com a capa até o vídeo começar.</li>
  *     <li>Player escondido: qualquer botão mostra o player (CH+/CH− trocam de vídeo direto).</li>
  *     <li>Player visível, na linha do tempo: OK pausa/continua, ←/→ volta/avança 10 s
  *     (segurar acelera), ↓ vai para os botões, ↑ ou Voltar esconde.</li>
- *     <li>Botões (ícones): legendas, áudio e dublagem, próximo, mais opções (controles do SmartTube).</li>
+ *     <li>Botões (ícones Hugeicons): anterior, play/pausa, próximo, legendas, áudio e dublagem,
+ *     mais opções (controles do SmartTube).</li>
  *     <li>Legendas e dublagem abrem numa gaveta lateral própria, no visual do OpenTube.</li>
  * </ul>
  * As informações do vídeo ficam sobre um degradê preto no pé da tela, com a foto redonda do canal.
@@ -57,13 +58,15 @@ public class OpenTubeOverlay {
     private static final long TUNE_MAX_MS = 15_000;
     private static final long SUPPRESS_SMARTTUBE_UI_MS = 3000;
 
-    private static final int BUTTON_PLAY = 0;
-    private static final int BUTTON_SUBTITLES = 1;
-    private static final int BUTTON_AUDIO = 2;
-    private static final int BUTTON_NEXT = 3;
-    private static final int BUTTON_MORE = 4;
-    private static final String[] BUTTON_LABELS = {"Pausar", "Legendas", "Áudio e dublagem", "Próximo vídeo", "Mais opções"};
-    private static final int[] BUTTON_ICONS = {R.drawable.ot_ic_pause, R.drawable.ot_ic_subtitles, R.drawable.ot_ic_dub, R.drawable.ot_ic_next, R.drawable.ot_ic_more};
+    private static final int BUTTON_PREVIOUS = 0;
+    private static final int BUTTON_PLAY = 1;
+    private static final int BUTTON_NEXT = 2;
+    private static final int BUTTON_SUBTITLES = 3;
+    private static final int BUTTON_AUDIO = 4;
+    private static final int BUTTON_MORE = 5;
+    private static final String[] BUTTON_LABELS = {"Vídeo anterior", "Pausar", "Próximo vídeo", "Legendas", "Áudio e dublagem", "Mais opções"};
+    private static final int[] BUTTON_ICONS = {R.drawable.ot_ic_previous, R.drawable.ot_ic_pause, R.drawable.ot_ic_next,
+            R.drawable.ot_ic_subtitles, R.drawable.ot_ic_dub, R.drawable.ot_ic_more};
     /** Vermelho da parte já vista da barra, como no YouTube. */
     private static final int WATCHED = 0xFFFF0033;
 
@@ -75,7 +78,6 @@ public class OpenTubeOverlay {
     private final FrameLayout mRoot;
     private final LinearLayout mBug;
     private final ImageView mBugCover;
-    private final TextView mBugName;
 
     private final FrameLayout mTune;
     private final ImageView mTuneCover;
@@ -104,7 +106,7 @@ public class OpenTubeOverlay {
     private boolean mResumed;
     private boolean mPlayerVisible;
     private boolean mOnButtons;
-    private int mButtonIndex;
+    private int mButtonIndex = BUTTON_PLAY; // ↓ cai no play, entre o anterior e o próximo
     private String mLastVideoId;
     private String mAvatarUrl;
     private TvChannel mBugChannel;
@@ -302,20 +304,14 @@ public class OpenTubeOverlay {
         mTuneStatus.setText("sintonizando…");
         tuneContent.addView(mTuneStatus, wrap(context, 6));
 
-        // --- Canto superior direito: nome + capa do canal (fica por cima de tudo) ---
+        // --- Canto superior direito: só a capa do canal (fica por cima de tudo) ---
         mBug = new LinearLayout(context);
         mBug.setOrientation(LinearLayout.HORIZONTAL);
         mBug.setGravity(Gravity.CENTER_VERTICAL);
         int bugPad = OpenTubeStyle.dp(context, 5);
-        mBug.setPadding(OpenTubeStyle.dp(context, 12), bugPad, bugPad, bugPad);
+        mBug.setPadding(bugPad, bugPad, bugPad, bugPad);
         mBug.setBackground(OpenTubeStyle.rounded(context, 0x8C000000, 10, 0, 0));
         mBug.setAlpha(0.92f);
-
-        mBugName = OpenTubeStyle.label(context, 11, OpenTubeStyle.TEXT, 0.14f);
-        LinearLayout.LayoutParams bugNameParams = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        bugNameParams.rightMargin = OpenTubeStyle.dp(context, 10);
-        mBug.addView(mBugName, bugNameParams);
 
         mBugCover = new ImageView(context);
         mBugCover.setScaleType(ImageView.ScaleType.FIT_XY);
@@ -634,6 +630,9 @@ public class OpenTubeOverlay {
             case BUTTON_AUDIO:
                 showAudioDrawer();
                 break;
+            case BUTTON_PREVIOUS:
+                skip(false);
+                break;
             case BUTTON_NEXT:
                 skip(true);
                 break;
@@ -837,7 +836,7 @@ public class OpenTubeOverlay {
         TvChannel channel = OpenTubeSession.getChannel();
         if (channel != null && channel != mBugChannel) {
             mBugChannel = channel;
-            mBugName.setText(channel.name);
+            mBugCover.setContentDescription(channel.name);
             OpenTubeCovers.bind(mBugCover, channel, 6);
         }
 

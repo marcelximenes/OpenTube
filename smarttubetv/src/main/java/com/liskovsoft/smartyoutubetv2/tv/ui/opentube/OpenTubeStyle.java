@@ -70,11 +70,28 @@ final class OpenTubeStyle {
         return drawable;
     }
 
+    private static Typeface sRegular;
+    private static Typeface sMedium;
+
+    /** IBM Plex Sans (assets/opentube/fonts, licença OFL). Se não carregar, cai na fonte do sistema. */
+    static Typeface font(Context context, boolean medium) {
+        if (sRegular == null) {
+            try {
+                sRegular = Typeface.createFromAsset(context.getAssets(), "opentube/fonts/IBMPlexSans-Regular.ttf");
+                sMedium = Typeface.createFromAsset(context.getAssets(), "opentube/fonts/IBMPlexSans-Medium.ttf");
+            } catch (RuntimeException e) {
+                sRegular = Typeface.create("sans-serif", Typeface.NORMAL);
+                sMedium = Typeface.create("sans-serif-medium", Typeface.NORMAL);
+            }
+        }
+        return medium ? sMedium : sRegular;
+    }
+
     static TextView text(Context context, float sizeSp, int color, boolean bold) {
         TextView view = new TextView(context);
         view.setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeSp);
         view.setTextColor(color);
-        view.setTypeface(Typeface.create(bold ? "sans-serif-medium" : "sans-serif", Typeface.NORMAL));
+        view.setTypeface(font(context, bold));
         view.setIncludeFontPadding(false);
         return view;
     }

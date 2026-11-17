@@ -240,9 +240,8 @@ public class OpenTubeActivity extends LeanbackActivity {
     private final class ChannelHolder extends RecyclerView.ViewHolder {
         private final ImageView mCover;
         private final View mDim;
-        private final View mStatusDot;
+        private final View mScrim;
         private final TextView mName;
-        private final TextView mCount;
         private final View mRing;
         private TvChannel mChannel;
         private boolean mAnimatedIn;
@@ -261,42 +260,21 @@ public class OpenTubeActivity extends LeanbackActivity {
             mCover.setScaleType(ImageView.ScaleType.FIT_XY);
             card.addView(mCover, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
-            View scrim = new View(context);
-            scrim.setBackground(OpenTubeStyle.cardScrim(context, CARD_RADIUS_DP));
+            // O card é só a capa (ela já traz o nome). O nome escrito só aparece em canal sem capa.
+            mScrim = new View(context);
+            mScrim.setBackground(OpenTubeStyle.cardScrim(context, CARD_RADIUS_DP));
             FrameLayout.LayoutParams scrimParams = new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, OpenTubeStyle.dp(context, 64), Gravity.BOTTOM);
-            card.addView(scrim, scrimParams);
-
-            LinearLayout texts = new LinearLayout(context);
-            texts.setOrientation(LinearLayout.VERTICAL);
-            int pad = OpenTubeStyle.dp(context, 10);
-            texts.setPadding(pad, 0, pad, pad);
-            card.addView(texts, new FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM));
-
-            LinearLayout nameRow = new LinearLayout(context);
-            nameRow.setOrientation(LinearLayout.HORIZONTAL);
-            nameRow.setGravity(Gravity.CENTER_VERTICAL);
-            texts.addView(nameRow);
-
-            mStatusDot = new View(context);
-            int dot = OpenTubeStyle.dp(context, 6);
-            LinearLayout.LayoutParams dotParams = new LinearLayout.LayoutParams(dot, dot);
-            dotParams.rightMargin = OpenTubeStyle.dp(context, 6);
-            nameRow.addView(mStatusDot, dotParams);
+            card.addView(mScrim, scrimParams);
 
             mName = OpenTubeStyle.label(context, 12, OpenTubeStyle.TEXT, 0.08f);
             mName.setSingleLine(true);
             mName.setEllipsize(TextUtils.TruncateAt.END);
             mName.setShadowLayer(6, 0, 1, 0xCC000000);
-            nameRow.addView(mName, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-
-            mCount = OpenTubeStyle.text(context, 10, OpenTubeStyle.TEXT_SECONDARY, false);
-            mCount.setShadowLayer(6, 0, 1, 0xCC000000);
-            LinearLayout.LayoutParams countParams = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            countParams.topMargin = OpenTubeStyle.dp(context, 3);
-            texts.addView(mCount, countParams);
+            int pad = OpenTubeStyle.dp(context, 10);
+            mName.setPadding(pad, 0, pad, pad);
+            card.addView(mName, new FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM));
 
             // Escurece os cards sem foco, para o focado "acender"
             mDim = new View(context);
@@ -339,22 +317,11 @@ public class OpenTubeActivity extends LeanbackActivity {
                 OpenTubeCovers.bind(mCover, channel, CARD_RADIUS_DP);
             }
             mName.setText(channel.name);
+            int nameVisibility = channel.cover == null ? View.VISIBLE : View.GONE;
+            mName.setVisibility(nameVisibility);
+            mScrim.setVisibility(nameVisibility);
+            itemView.setContentDescription(channel.name);
             mDim.setAlpha(itemView.hasFocus() ? 0f : 1f);
-
-            OpenTubeRepository repository = OpenTubeRepository.instance(itemView.getContext());
-            if (mOpening == channel && !repository.isReady(channel)) {
-                mCount.setText("sintonizando…");
-                mStatusDot.setBackground(OpenTubeStyle.circle(OpenTubeStyle.TEXT_MUTED));
-            } else if (repository.isReady(channel)) {
-                mCount.setText(channel.channelIds.length + " fontes  ·  no ar");
-                mStatusDot.setBackground(OpenTubeStyle.circle(0xFF3DD68C));
-            } else if (repository.isLoading(channel)) {
-                mCount.setText(channel.channelIds.length + " fontes  ·  carregando");
-                mStatusDot.setBackground(OpenTubeStyle.circle(OpenTubeStyle.TEXT_MUTED));
-            } else {
-                mCount.setText(channel.channelIds.length + " fontes");
-                mStatusDot.setBackground(OpenTubeStyle.circle(0x40FFFFFF));
-            }
 
             // Entrada: os cards sobem e aparecem em cascata na primeira vez
             if (!mAnimatedIn && !mEntered) {
