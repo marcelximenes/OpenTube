@@ -46,10 +46,6 @@
      "name": "Dezeen"
     },
     {
-     "id": "UCXP_5IkhhUspBadQsKZSJoA",
-     "name": "Caos Planejado"
-    },
-    {
      "id": "UCKIwJ734FQFP2nWBxvNx_YQ",
      "name": "Urban Atlas"
     },
@@ -86,22 +82,6 @@
      "name": "Alan Fisher"
     },
     {
-     "id": "UCf4iKXL_SJQ5d0qsKkboRRQ",
-     "name": "RMTransit"
-    },
-    {
-     "id": "UCR1IuLEqb6UEA_zQ81kwXfg",
-     "name": "Real Engineering"
-    },
-    {
-     "id": "UC1ZBQ-F-yktYD4m5AzM6pww",
-     "name": "Mustard"
-    },
-    {
-     "id": "UClqhvGmHcvWL9w3R48t9QXQ",
-     "name": "Engineering Explained"
-    },
-    {
      "id": "UC3r_kdJocuqtDYb2GgM42Ng",
      "name": "ArchDaily"
     },
@@ -118,10 +98,6 @@
      "name": "Tiny House Expedition"
     },
     {
-     "id": "UCmpc-lRLDToCUwJewlPeJ4w",
-     "name": "Arquitetura e Urbanismo para Todos"
-    },
-    {
      "id": "UCuVLG9pThvBABcYCm7pkNkA",
      "name": "Climate Town"
     },
@@ -136,13 +112,29 @@
     {
      "id": "UCQbdsX9AVd8sF35p8825NcQ",
      "name": "Doma Arquitetura"
+    },
+    {
+     "id": "UC07v1rZ4g6vxjoHRAoJZWHg",
+     "name": "OPEN SPACE"
+    },
+    {
+     "id": "UCIpZwvvmDmZYlpcdUlT_mqQ",
+     "name": "Mirageon"
+    },
+    {
+     "id": "UCiVWjDbSQMGFddqRwToBRbg",
+     "name": "Design Anthology"
+    },
+    {
+     "id": "UClYhOGHRF0jDXDA3qHjzDNg",
+     "name": "Design Will Save The World"
     }
    ],
    "cover": "covers/arch3.png",
    "minMinutes": 5
   },
   {
-   "name": "SCIFI",
+   "name": "Intergalactic TV",
    "color": "#E5484D",
    "sources": [
     {
@@ -206,14 +198,6 @@
      "name": "LEMMiNO"
     },
     {
-     "id": "UC8X4WT5_lUXqMjeN8bGFk9w",
-     "name": "Kane Pixels"
-    },
-    {
-     "id": "UCveZqqGewoyPiacooywP5Ig",
-     "name": "Alt Shift X"
-    },
-    {
      "id": "UCSpFnDQr88xCZ80N-X7t0nQ",
      "name": "Corridor Crew"
     },
@@ -226,7 +210,8 @@
      "name": "Futurices"
     }
    ],
-   "cover": "covers/scifi.png"
+   "cover": "covers/intergalactic-tv.png",
+   "minMinutes": 8
   },
   {
    "name": "LOFI",
@@ -433,8 +418,8 @@
      "name": "Vevo DSCVR"
     },
     {
-     "id": "UCqeIY2maSa-UhdbEs35CC-A",
-     "name": "Música de Bolso"
+     "id": "UCTYBfMmrxRVP2IYfVJIjWrQ",
+     "name": "Som no Sebo"
     },
     {
      "id": "UCCpd6qvE03uwMqoHwMfulSg",
@@ -451,10 +436,6 @@
     {
      "id": "UCdjZk4tVh36cykHUWBWnR4w",
      "name": "BalconyTV"
-    },
-    {
-     "id": "UCpusLWatNrjslOgnMdKLHbw",
-     "name": "Stripped Sessions"
     }
    ],
    "cover": "covers/sessions.png",
@@ -477,100 +458,24 @@
      "name": "The Futur"
     },
     {
-     "id": "UC6CXMJjB30e0UlFo082IFVA",
-     "name": "Clube do Design"
-    },
-    {
-     "id": "UCSIkG6wtvxDduCumCRAAO4A",
-     "name": "Will Paterson"
-    },
-    {
      "id": "UCoeJKtPJLoIBqWq4o8TDLpA",
      "name": "Satori Graphics"
-    },
-    {
-     "id": "UC2PV1NNl_wDFX9PbmKB7UWA",
-     "name": "Design de Conversão"
-    },
-    {
-     "id": "UCbqd2YmFeHMwxlj4NcN5zPQ",
-     "name": "Zimri Mayfield"
-    },
-    {
-     "id": "UCT_of6HCtVZFpnnnLUeAGYA",
-     "name": "Yes I'm a Designer"
     },
     {
      "id": "UCHR81XjA9I6hfFeTFiJRaDQ",
      "name": "Martina Flor"
     },
     {
-     "id": "UCN7dywl5wDxTu1RM3eJ_h9Q",
-     "name": "Flux Academy"
-    },
-    {
-     "id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
-     "name": "DesignCourse"
-    },
-    {
      "id": "UCSb-xYOELhIqVr2n9s-b_4w",
      "name": "Linus Boman"
-    },
-    {
-     "id": "UCAbq1eKey19tt-FfaIO1RMA",
-     "name": "Dansky"
-    },
-    {
-     "id": "UCvBGFeXbBrq3W9_0oNLJREQ",
-     "name": "Jesse Showalter"
-    },
-    {
-     "id": "UCScRSwdX0t31gjk3MYXIuYQ",
-     "name": "Charli Marie"
-    },
-    {
-     "id": "UC64eec0UYHxflyEWgyZOvLA",
-     "name": "Gareth David Studio"
-    },
-    {
-     "id": "UC0f9NbKjUUbnL2cOa12ENIQ",
-     "name": "Mike Locke"
     },
     {
      "id": "UCa8W2_uf81Ew6gYuw0VPSeA",
      "name": "Juxtopposed"
     },
     {
-     "id": "UCWUGGwfTfJ0-2jUS3dZqOJA",
-     "name": "Femke"
-    },
-    {
-     "id": "UC8lxnUR_CzruT2KA6cb7p0Q",
-     "name": "Envato Tuts+"
-    },
-    {
-     "id": "UCeR7U67I2J1icV8E6Rn40vQ",
-     "name": "tutvid"
-    },
-    {
-     "id": "UCwQ0ySicc9jpUka4n3S2gaA",
-     "name": "Ian Barnard"
-    },
-    {
      "id": "UCdgUN8rX3SEb9L7FDub3I6A",
      "name": "Design Theory"
-    }
-   ],
-   "cover": "covers/dsgn.png",
-   "minMinutes": 5
-  },
-  {
-   "name": "Tech no Logic",
-   "color": "#9B7BE0",
-   "sources": [
-    {
-     "id": "UCsBjURrPoezykLs9EqgamOA",
-     "name": "Fireship"
     },
     {
      "id": "UCuQT7Vc3OjjZuGkqehNxb6w",
@@ -579,6 +484,42 @@
     {
      "id": "UCqv7gk4p_rB4nRz0j7B5yFA",
      "name": "Interface Studies"
+    },
+    {
+     "id": "UC98Glz-MWdnqeZDBxRPUUvQ",
+     "name": "Design Docs"
+    },
+    {
+     "id": "UCIn5gFPi5hSB1Gqpur33_3w",
+     "name": "The Science of Products"
+    },
+    {
+     "id": "UC2oCugzU6W8-h95W7eBTUEg",
+     "name": "NNgroup"
+    },
+    {
+     "id": "UChPo_E4H5QTm-OXBALKerXw",
+     "name": "It's Nice That"
+    },
+    {
+     "id": "UCa_aLyHBN8zuisUpHDjmBbw",
+     "name": "elliotisacoolguy"
+    },
+    {
+     "id": "UCMtsxMJQcjKtrog4a-bkTZw",
+     "name": "Curious Muse"
+    }
+   ],
+   "cover": "covers/dsgn.png",
+   "minMinutes": 5
+  },
+  {
+   "name": "ROBOTS.txt",
+   "color": "#9B7BE0",
+   "sources": [
+    {
+     "id": "UCsBjURrPoezykLs9EqgamOA",
+     "name": "Fireship"
     },
     {
      "id": "UC4QZ_LsYcvcq7qOsOhpAX4A",
@@ -593,16 +534,8 @@
      "name": "Marques Brownlee"
     },
     {
-     "id": "UCU5JicSrEM5A63jkJ2QvGYw",
-     "name": "Filipe Deschamps"
-    },
-    {
      "id": "UCMiJRAwDNSNzuYeN2uWa0pA",
      "name": "Mrwhosetheboss"
-    },
-    {
-     "id": "UC1LpsuAUaKoMzzJSEt5WImw",
-     "name": "Asianometry"
     },
     {
      "id": "UCkVfrGwV-iG9bSsgCbrNPxQ",
@@ -637,58 +570,6 @@
      "name": "Linus Tech Tips"
     },
     {
-     "id": "UC9-y-6csu5WGm29I7JiwpnA",
-     "name": "Computerphile"
-    },
-    {
-     "id": "UCbfYPyITQ-7l4upoX8nvctg",
-     "name": "Two Minute Papers"
-    },
-    {
-     "id": "UCUyeluBRhGPCW4rPe_UvBZQ",
-     "name": "ThePrimeTime"
-    },
-    {
-     "id": "UCbRP3c757lWg9M-U7TyEkXA",
-     "name": "Theo - t3.gg"
-    },
-    {
-     "id": "UC6biysICWOJ-C3P4Tyeggzg",
-     "name": "Low Level"
-    },
-    {
-     "id": "UCS0N5baNlQWJCUrhCEo8WlA",
-     "name": "Ben Eater"
-    },
-    {
-     "id": "UCqpNnEzmmlzBfdy3X0eMOMg",
-     "name": "Tecnoblog"
-    },
-    {
-     "id": "UC_bXJnsgwOqEPA_-6N6faKw",
-     "name": "Canaltech"
-    },
-    {
-     "id": "UCFuIUoyHB12qpYa8Jpxoxow",
-     "name": "Código Fonte TV"
-    },
-    {
-     "id": "UCib793mnUOhWymCh2VJKplQ",
-     "name": "Akitando (Fabio Akita)"
-    },
-    {
-     "id": "UCyHOBY6IDZF9zOKJPou2Rgg",
-     "name": "Lucas Montano"
-    },
-    {
-     "id": "UCSfwM5u0Kce6Cce8_S72olg",
-     "name": "Rocketseat"
-    },
-    {
-     "id": "UCVYamHliCI9rw1tHR1xbkfw",
-     "name": "Dave2D"
-    },
-    {
      "id": "UCdmGjywrxeOPfC7vDllmSgQ",
      "name": "TecMundo"
     },
@@ -701,13 +582,17 @@
      "name": "Explaining Tech Like You're Five"
     }
    ],
-   "cover": "covers/tech-no-logic.png",
+   "cover": "covers/robots-txt.png",
    "minMinutes": 5
   },
   {
    "name": "POLITIK",
    "color": "#3FB8AF",
    "sources": [
+    {
+     "id": "UC1LpsuAUaKoMzzJSEt5WImw",
+     "name": "Asianometry"
+    },
     {
      "id": "UCAMExYqcweM7PUebKfmLdFA",
      "name": "Ian Neves"
@@ -725,10 +610,6 @@
      "name": "Tese Onze"
     },
     {
-     "id": "UCk5BcU1rOy6hepflk7_q_Pw",
-     "name": "Meteoro Brasil"
-    },
-    {
      "id": "UC02coXfDPjEmU8uDT2G8Z2A",
      "name": "Jones Manoel"
     },
@@ -737,44 +618,12 @@
      "name": "TLDR News"
     },
     {
-     "id": "UCOzMAa6IhV6uwYQATYG_2kg",
-     "name": "Novara Media"
-    },
-    {
      "id": "UCugK_9W-5o56H0pEnJtFQnw",
      "name": "Canal Meio"
     },
     {
      "id": "UCTnRtQ9IkBGmCKcLB31BcyA",
      "name": "ICL Notícias"
-    },
-    {
-     "id": "UCUM4-KGZEXC2pk6zRDL9jMQ",
-     "name": "MyNews"
-    },
-    {
-     "id": "UCOnuheHbS2DgZiAZFL0-Sbg",
-     "name": "Brasil de Fato"
-    },
-    {
-     "id": "UCOjUlJ4EpPxuhtT0zEVw25A",
-     "name": "Opera Mundi"
-    },
-    {
-     "id": "UCRuy5PigeeBuecKnwqhM4yg",
-     "name": "TV 247"
-    },
-    {
-     "id": "UCutrj9cR0cNi2PfiTMGAWrA",
-     "name": "DCM TV"
-    },
-    {
-     "id": "UC3sMBA3BdnsKSVI0WB9yVWQ",
-     "name": "Revista Fórum"
-    },
-    {
-     "id": "UCDGz2exMIsPQ4k9VrsuhKTA",
-     "name": "CartaCapital"
     },
     {
      "id": "UCNqzAD9EiECreuH6LA8IYeA",
@@ -789,52 +638,16 @@
      "name": "Xadrez Verbal"
     },
     {
-     "id": "UCrtOL8bJsh-csozGS2aV77Q",
-     "name": "Estadão"
-    },
-    {
      "id": "UCmYuiV9wAR3i8p19Ygc7izg",
      "name": "Folha de S.Paulo"
-    },
-    {
-     "id": "UCVFbXI6Gu8U2f9Gjtxw4A-Q",
-     "name": "UOL"
-    },
-    {
-     "id": "UCoa-D_VfMkFrCYodrOC9-mA",
-     "name": "Band Jornalismo"
-    },
-    {
-     "id": "UCvdwhh_fDyWccR42-rReZLw",
-     "name": "CNN Brasil"
     },
     {
      "id": "UCp6RRaz93Pt2xYZoEye_rLA",
      "name": "GloboNews"
     },
     {
-     "id": "UCFCiSRbCVwQ_BQaDQBYxN_A",
-     "name": "Poder360"
-    },
-    {
-     "id": "UCP391YRAjSOdM_bwievgaZA",
-     "name": "Jovem Pan News"
-    },
-    {
-     "id": "UCLmvyoJW1wJlKY-l1KguCSw",
-     "name": "O Antagonista"
-    },
-    {
-     "id": "UCWdGgeyOnCOGnvhNdbVl1dQ",
-     "name": "Gazeta do Povo"
-    },
-    {
      "id": "UCy3eOZh9n5P3aWWKXmrq6yg",
      "name": "PHVox Geopolitics Made Clear"
-    },
-    {
-     "id": "UCkVBx-XpEXAgWHX5-P1hl-A",
-     "name": "HENI OZI CUKIER"
     },
     {
      "id": "UCWeEPkVspei8apARZXTIY5Q",
@@ -877,14 +690,6 @@
      "name": "VICE News"
     },
     {
-     "id": "UCNye-wNBqNL5ZzHSJj3l8Bg",
-     "name": "Al Jazeera English"
-    },
-    {
-     "id": "UC0p5jTq6Xx_DosDFxVXnWaQ",
-     "name": "The Economist"
-    },
-    {
      "id": "UCqit4NtRDfdEHKX_zgmAwrg",
      "name": "Morning Brew"
     },
@@ -893,84 +698,16 @@
      "name": "Jornal Nota"
     },
     {
-     "id": "UChqUTb7kYRX8-EiaN3XFrSQ",
-     "name": "Reuters"
-    },
-    {
-     "id": "UC52X5wxOL_s5yw0dQk7NtgA",
-     "name": "Associated Press"
-    },
-    {
-     "id": "UCoUxsWakJucWg46KW5RsvPw",
-     "name": "Financial Times"
-    },
-    {
-     "id": "UCK7tptUDHh-RYDsdxO1-5QQ",
-     "name": "The Wall Street Journal"
-    },
-    {
-     "id": "UCqnbDFdCpuN8CMEg0VuEBqA",
-     "name": "The New York Times"
-    },
-    {
-     "id": "UCHpw8xwDNhU9gdohEcJu4aA",
-     "name": "The Guardian"
-    },
-    {
      "id": "UCTrQ7HXWRRxr7OsOtodr2_w",
      "name": "Channel 4 News"
-    },
-    {
-     "id": "UC6ZFN9Tx6xh-skXCuRHCDpQ",
-     "name": "PBS NewsHour"
-    },
-    {
-     "id": "UCQfwfsi5VrQ8yKZ-UWmAEFg",
-     "name": "FRANCE 24 English"
-    },
-    {
-     "id": "UCknLrEdhRCp1aegoMqRaCZg",
-     "name": "DW News"
-    },
-    {
-     "id": "UCoMdktPbSTixAyNGwb-UYkQ",
-     "name": "Sky News"
-    },
-    {
-     "id": "UCSrZ3UV4jOidv8ppoVuvW9Q",
-     "name": "euronews"
-    },
-    {
-     "id": "UC3ScyryU9Oy9Wse3a8OAmYQ",
-     "name": "FRONTLINE PBS"
     },
     {
      "id": "UC-uhvujip5deVcEtLxnW8qg",
      "name": "TLDR News Global"
     },
     {
-     "id": "UCYpRDnhk5H8h16jpS84uqsA",
-     "name": "Le Monde"
-    },
-    {
-     "id": "UC16niRr50-MSBwiO3YDb3RA",
-     "name": "BBC News"
-    },
-    {
      "id": "UCaGmdJSSiR7fkh2A-c6emsA",
      "name": "g1"
-    },
-    {
-     "id": "UC376n347Ob5Lwzq2WGzF1AA",
-     "name": "SBT News"
-    },
-    {
-     "id": "UCIM-wfyv9hg2oEiA81mQc2A",
-     "name": "RTP Notícias"
-    },
-    {
-     "id": "UC_Lnb8ZHqqgLbp-7hltuT9w",
-     "name": "CNA Insider"
     },
     {
      "id": "UCW39zufHfsuGgpLviKh297Q",
@@ -1044,16 +781,16 @@
      "name": "Dr Julia Martins"
     },
     {
-     "id": "UCxERSsg37iFHCPeru8YlTAA",
-     "name": "USA History Facts"
-    },
-    {
      "id": "UCO6nDCimkF79NZRRb8YiDcA",
      "name": "Storied"
     },
     {
      "id": "UCU78dqQJopShvHsUVD4FiLw",
      "name": "Guilherme Dobrychtop"
+    },
+    {
+     "id": "UCL5kBJmBUVFLYBDiSiK1VDw",
+     "name": "The House of Tabula"
     },
     {
      "id": "UCMmaBzfCCwZ2KqaBJjkj0fw",
@@ -1120,7 +857,7 @@
    "minMinutes": 8
   },
   {
-   "name": "Entertainment",
+   "name": "Things",
    "color": "#7FB3D5",
    "sources": [
     {
@@ -1204,10 +941,6 @@
      "name": "The Modern Rogue"
     },
     {
-     "id": "UCto7D1L-MiRoOziCXK9uT5Q",
-     "name": "Let's Game It Out"
-    },
-    {
      "id": "UCK3IOOEUXQT-dAl3jy-xkaw",
      "name": "Baka Gaijin"
     },
@@ -1258,9 +991,13 @@
     {
      "id": "UCniXurp_3xcDh923eiqGX3w",
      "name": "Rowan Ellis"
+    },
+    {
+     "id": "UCJm2TgUqtK1_NLBrjNQ1P-w",
+     "name": "Second Thought"
     }
    ],
-   "cover": "covers/entertainment.png",
+   "cover": "covers/things.png",
    "minMinutes": 5
   },
   {
@@ -1892,10 +1629,6 @@
      "name": "Som de Peso"
     },
     {
-     "id": "UCTYBfMmrxRVP2IYfVJIjWrQ",
-     "name": "Som no Sebo"
-    },
-    {
      "id": "UC6jHLsPtVcYKW2jz5NH7ZuA",
      "name": "Stereosfera"
     },
@@ -2008,6 +1741,10 @@
      "name": "Peppa Pig em Português Brasil"
     },
     {
+     "id": "UC0cGVh96osM7yqMu0ENSKKQ",
+     "name": "Mundo Bita"
+    },
+    {
      "id": "UCZNV4_htB8Vw5oKogme3G_A",
      "name": "Shaun, o Carneiro"
     },
@@ -2062,10 +1799,6 @@
    "name": "KIDS EDU",
    "color": "#5B9BE5",
    "sources": [
-    {
-     "id": "UC0cGVh96osM7yqMu0ENSKKQ",
-     "name": "Mundo Bita"
-    },
     {
      "id": "UCGs6qb1ohFhDzeHbYeJlsAA",
      "name": "Palavra Cantada Oficial"
@@ -2157,6 +1890,14 @@
    "name": "Games",
    "color": "#E5484D",
    "sources": [
+    {
+     "id": "UCto7D1L-MiRoOziCXK9uT5Q",
+     "name": "Let's Game It Out"
+    },
+    {
+     "id": "UCQPaSBaTONuIcSzb-CE3dyQ",
+     "name": "tvPH"
+    },
     {
      "id": "UCqJ-Xo29CKyLTjn6z2XwYAw",
      "name": "Game Maker's Toolkit"
@@ -2325,22 +2066,6 @@
      "name": "COPA90"
     },
     {
-     "id": "UC3HPbvB6f58X_7SMIp6OPYw",
-     "name": "Thinking Basketball"
-    },
-    {
-     "id": "UCsiCOcr5SZAWlJMfcw9P__w",
-     "name": "NBA Brasil"
-    },
-    {
-     "id": "UCB_qr75-ydFVKSF9Dmo6izg",
-     "name": "Formula 1"
-    },
-    {
-     "id": "UCk8XGxi7fsTqQQRVq9LSraw",
-     "name": "UFC Brasil"
-    },
-    {
      "id": "UCTl3QQTvqHFjurroKxexy2Q",
      "name": "Olympics"
     },
@@ -2363,10 +2088,6 @@
     {
      "id": "UCwWgXewMHxlPkP5FkxoZvKQ",
      "name": "Men in Blazers"
-    },
-    {
-     "id": "UC9OlHEgxoaY6QY6nWPoiqQg",
-     "name": "Grande Prêmio"
     },
     {
      "id": "UCPHvx0NxJubMU8QqZ6X_Efw",
