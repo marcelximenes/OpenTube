@@ -70,21 +70,27 @@ final class OpenTubeStyle {
         return drawable;
     }
 
-    private static Typeface sRegular;
-    private static Typeface sMedium;
+    static final int WEIGHT_REGULAR = 0;
+    static final int WEIGHT_MEDIUM = 1;
+    static final int WEIGHT_BOLD = 2;
+    private static final String[] FONT_FILES = {"IBMPlexSans-Regular.ttf", "IBMPlexSans-Medium.ttf", "IBMPlexSans-Bold.ttf"};
+    private static final String[] FONT_FALLBACKS = {"sans-serif", "sans-serif-medium", "sans-serif"};
+    private static final Typeface[] sFonts = new Typeface[FONT_FILES.length];
 
     /** IBM Plex Sans (assets/opentube/fonts, licença OFL). Se não carregar, cai na fonte do sistema. */
-    static Typeface font(Context context, boolean medium) {
-        if (sRegular == null) {
+    static Typeface font(Context context, int weight) {
+        if (sFonts[weight] == null) {
             try {
-                sRegular = Typeface.createFromAsset(context.getAssets(), "opentube/fonts/IBMPlexSans-Regular.ttf");
-                sMedium = Typeface.createFromAsset(context.getAssets(), "opentube/fonts/IBMPlexSans-Medium.ttf");
+                sFonts[weight] = Typeface.createFromAsset(context.getAssets(), "opentube/fonts/" + FONT_FILES[weight]);
             } catch (RuntimeException e) {
-                sRegular = Typeface.create("sans-serif", Typeface.NORMAL);
-                sMedium = Typeface.create("sans-serif-medium", Typeface.NORMAL);
+                sFonts[weight] = Typeface.create(FONT_FALLBACKS[weight], weight == WEIGHT_BOLD ? Typeface.BOLD : Typeface.NORMAL);
             }
         }
-        return medium ? sMedium : sRegular;
+        return sFonts[weight];
+    }
+
+    static Typeface font(Context context, boolean medium) {
+        return font(context, medium ? WEIGHT_MEDIUM : WEIGHT_REGULAR);
     }
 
     static TextView text(Context context, float sizeSp, int color, boolean bold) {

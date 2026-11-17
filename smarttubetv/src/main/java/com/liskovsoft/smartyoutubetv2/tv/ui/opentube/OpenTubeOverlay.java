@@ -38,6 +38,7 @@ import java.util.Set;
  * OpenTube: player próprio sobre o player do SmartTube, ativo só nos vídeos de um canal de TV.
  * <ul>
  *     <li>Canto superior direito: só a capa do canal de TV (quadradinho), sem o nome.</li>
+ *     <li>Grava o que já foi visto e a duração (OpenTubeHistory) e pula vídeo mais curto que o mínimo do canal.</li>
  *     <li>Ao entrar num canal: tela "sintonizando" com a capa até o vídeo começar.</li>
  *     <li>Player escondido: qualquer botão mostra o player (CH+/CH− trocam de vídeo direto).</li>
  *     <li>Player visível, na linha do tempo: OK pausa/continua, ←/→ volta/avança 10 s
@@ -67,6 +68,7 @@ public class OpenTubeOverlay {
     private static final String[] BUTTON_LABELS = {"Vídeo anterior", "Pausar", "Próximo vídeo", "Legendas", "Áudio e dublagem", "Mais opções"};
     private static final int[] BUTTON_ICONS = {R.drawable.ot_ic_previous, R.drawable.ot_ic_pause, R.drawable.ot_ic_next,
             R.drawable.ot_ic_subtitles, R.drawable.ot_ic_dub, R.drawable.ot_ic_more};
+    private static final int BUTTON_INSET_DP = 3;
     /** Vermelho da parte já vista da barra, como no YouTube. */
     private static final int WATCHED = 0xFFFF0033;
 
@@ -116,6 +118,7 @@ public class OpenTubeOverlay {
     private long mSuppressSmartTubeUiUntil;
     private boolean mSmartTubeUiRequested;
     private long mPendingSeekMs = -1;
+    private String mShortSkippedId;
 
     private final Runnable mTick = new Runnable() {
         @Override
@@ -177,6 +180,7 @@ public class OpenTubeOverlay {
         labelRow.addView(mLabel);
 
         mTitle = OpenTubeStyle.text(context, 24, OpenTubeStyle.TEXT, true);
+        mTitle.setTypeface(OpenTubeStyle.font(context, OpenTubeStyle.WEIGHT_BOLD));
         mTitle.setMaxLines(2);
         mTitle.setEllipsize(TextUtils.TruncateAt.END);
         mTitle.setShadowLayer(8, 0, 1, 0x99000000);
@@ -234,15 +238,17 @@ public class OpenTubeOverlay {
         buttons.setPadding(breathe, breathe, 0, breathe);
         mPlayerContent.addView(buttons, wrap(context, 11));
 
-        int size = OpenTubeStyle.dp(context, 44);
-        int iconPad = OpenTubeStyle.dp(context, 11);
+        // O botão já tem o tamanho do foco; sem foco, o círculo fica recuado (BUTTON_INSET_DP).
+        // Sem zoom na view, a linha dos botões não corta o círculo focado.
+        int size = OpenTubeStyle.dp(context, 44 + 2 * BUTTON_INSET_DP);
+        int iconPad = OpenTubeStyle.dp(context, 11 + BUTTON_INSET_DP);
         for (int i = 0; i < BUTTON_LABELS.length; i++) {
             ImageView button = new ImageView(context);
             button.setImageResource(BUTTON_ICONS[i]);
             button.setPadding(iconPad, iconPad, iconPad, iconPad);
             button.setContentDescription(BUTTON_LABELS[i]);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(size, size);
-            params.rightMargin = OpenTubeStyle.dp(context, 10);
+            params.rightMargin = OpenTubeStyle.dp(context, 10 - 2 * BUTTON_INSET_DP);
             buttons.addView(button, params);
             mButtons[i] = button;
         }
@@ -596,6 +602,9 @@ public class OpenTubeOverlay {
     }
 
     private void skip(boolean next) {
+        if (next && mFragment.getVideo() != null) {
+            OpenTubeHistory.instance(mActivity).markWatched(mFragment.getVideo().videoId); // pulou: sai da programação
+        }
         mSuppressSmartTubeUiUntil = SystemClock.uptimeMillis() + SUPPRESS_SMARTTUBE_UI_MS;
         flashCenterIcon(next ? R.drawable.ot_ic_next : R.drawable.ot_ic_previous);
         if (next) {
@@ -616,7 +625,7 @@ public class OpenTubeOverlay {
         android.util.Log.d("OpenTube", "botão " + BUTTON_LABELS[index]);
         ImageView button = mButtons[index];
         button.animate().scaleX(0.9f).scaleY(0.9f).setDuration(OpenTubeStyle.DUR_FAST_MS / 2)
-                .withEndAction(() -> button.animate().scaleX(1.12f).scaleY(1.12f)
+                .withEndAction(() -> button.animate().scaleX(1f).scaleY(1f)
                         .setDuration(OpenTubeStyle.DUR_FAST_MS).setInterpolator(OpenTubeStyle.SPRING).start())
                 .start();
 
@@ -852,6 +861,21 @@ public class OpenTubeOverlay {
             }
         }
 
+        long duration = mFragment.getDurationMs();
+        // Ao vivo (rádios 24/7) não entra: a posição começa em horas e "veria" o vídeo na hora
+        if (duration > 0 && mFragment.isPlaying() && !video.isLive) {
+            OpenTubeHistory.instance(mActivity).onProgress(video.videoId, mFragment.getPositionMs(), duration);
+            // Mais curto que o mínimo do canal: pula (e da próxima vez nem entra na programação)
+            if (channel != null && channel.minMinutes > 0 && duration < channel.minMinutes * 60_000L
+                    && !video.videoId.equals(mShortSkippedId)) {
+                mShortSkippedId = video.videoId;
+                android.util.Log.d("OpenTube", "curto (" + duration / 1000 + " s < " + channel.minMinutes + " min): pulando");
+                mSuppressSmartTubeUiUntil = SystemClock.uptimeMillis() + SUPPRESS_SMARTTUBE_UI_MS;
+                mFragment.skipToNext();
+                return;
+            }
+        }
+
         if (!video.videoId.equals(mLastVideoId)) {
             mLastVideoId = video.videoId;
             mAvatarUrl = null;
@@ -1002,11 +1026,13 @@ public class OpenTubeOverlay {
 
     private void styleButton(int index, boolean focused) {
         ImageView button = mButtons[index];
-        button.setBackground(OpenTubeStyle.circle(focused ? OpenTubeStyle.BRAND : 0x26FFFFFF));
+        int inset = focused ? 0 : OpenTubeStyle.dp(mActivity, BUTTON_INSET_DP);
+        button.setBackground(new android.graphics.drawable.InsetDrawable(
+                OpenTubeStyle.circle(focused ? OpenTubeStyle.BRAND : 0x26FFFFFF), inset));
+        // O InsetDrawable troca o padding da view pelo dele: devolve o recuo do ícone
+        int iconPad = OpenTubeStyle.dp(mActivity, 11 + BUTTON_INSET_DP);
+        button.setPadding(iconPad, iconPad, iconPad, iconPad);
         tint(button, focused ? OpenTubeStyle.BG : OpenTubeStyle.TEXT);
-        float scale = focused ? 1.12f : 1f;
-        button.animate().scaleX(scale).scaleY(scale).setDuration(OpenTubeStyle.DUR_MEDIUM_MS)
-                .setInterpolator(focused ? OpenTubeStyle.SPRING : OpenTubeStyle.EASE_OUT).start();
     }
 
     static void tint(ImageView view, int color) {
@@ -1066,9 +1092,7 @@ public class OpenTubeOverlay {
     private void updateInfo(Video video, boolean texts) {
         updatePlayButton(mFragment.getPlayWhenReady());
         if (texts) {
-            TvChannel channel = OpenTubeSession.getChannel();
-            String author = video.author != null ? video.author : "";
-            mLabel.setText(channel != null ? channel.name + "   ·   " + author : author);
+            mLabel.setText(video.author != null ? video.author : "");
             mTitle.setText(video.title != null ? video.title : "");
 
             String description = OpenTubeRepository.instance(mActivity).getDescription(video.videoId);

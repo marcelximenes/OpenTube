@@ -44,10 +44,9 @@ public final class OpenTubeSession {
             return;
         }
 
-        int start = OpenTubeRepository.instance(context).nextStartIndex(channel, videos.size());
+        // A programação já vem sem os vistos (OpenTubeHistory): começa sempre do primeiro
         List<Video> ordered = new ArrayList<>(videos.size());
-        for (int i = 0; i < videos.size(); i++) {
-            Video video = videos.get((start + i) % videos.size());
+        for (Video video : videos) {
             video.openTubeFromZero = true;
             video.fromQueue = false;
             ordered.add(video);

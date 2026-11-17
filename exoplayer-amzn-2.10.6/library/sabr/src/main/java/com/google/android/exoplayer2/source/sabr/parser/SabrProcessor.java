@@ -452,7 +452,10 @@ public class SabrProcessor {
         }
 
         // NOTE: PoToken attestation may fail a few times before passing, so a failure isn't proof it won't succeed.
-        this.fatalError = status != Status.OK ? new SabrPoTokenError("PoToken error: " + resultStatus) : null;
+        // OpenTube: ATTESTATION_PENDING é o YouTube ainda conferindo o token, e o vídeo continua vindo.
+        // Tratar como fatal mostrava "erro inesperado PoToken error: PENDING" e recarregava o vídeo à toa.
+        // Só ATTESTATION_REQUIRED (token recusado ou ausente) interrompe.
+        this.fatalError = status == Status.ATTESTATION_REQUIRED ? new SabrPoTokenError("PoToken error: " + resultStatus) : null;
 
         return result;
     }

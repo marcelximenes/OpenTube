@@ -102,9 +102,11 @@ final class OpenTubeCovers {
             }
         }
         Bitmap bitmap = null;
-        // Capa enviada pelo PC (files/opentube/covers) vale mais que a embutida no APK
-        java.io.File pushed = new java.io.File(context.getFilesDir(), path);
-        try (InputStream input = pushed.exists() ? new java.io.FileInputStream(pushed) : context.getAssets().open(path)) {
+        // Capa enviada pelo PC vale mais que a embutida no APK (mesma pasta da lista que está valendo)
+        java.io.File root = TvChannel.pushedRoot();
+        java.io.File pushed = root != null ? new java.io.File(root, path) : null;
+        try (InputStream input = pushed != null && pushed.exists()
+                ? new java.io.FileInputStream(pushed) : context.getAssets().open(path)) {
             bitmap = BitmapFactory.decodeStream(input);
         } catch (Exception e) {
             e.printStackTrace();

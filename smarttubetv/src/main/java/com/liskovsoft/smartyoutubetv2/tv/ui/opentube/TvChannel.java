@@ -21,6 +21,8 @@ public final class TvChannel {
             0xFF5B9BE5, 0xFFE5484D, 0xFF3DD68C, 0xFFF2C94C, 0xFFE8944A, 0xFF9B7BE0, 0xFF3FB8AF, 0xFFE06BA8
     };
     private static List<TvChannel> sChannels;
+    /** Pasta da lista enviada pelo PC que está valendo (ou null: vale a embutida no APK). */
+    private static java.io.File sPushedRoot;
 
     public final String name;
     public final int color;
@@ -28,13 +30,16 @@ public final class TvChannel {
     public final String[] sourceNames;
     /** Caminho da capa em assets/opentube (ex.: "covers/arch3.png"), ou null. */
     public final String cover;
+    /** Tempo mínimo de vídeo, em minutos (0 = sem mínimo). Configurado na curadoria. */
+    public final int minMinutes;
 
-    private TvChannel(String name, int color, String[] channelIds, String[] sourceNames, String cover) {
+    private TvChannel(String name, int color, String[] channelIds, String[] sourceNames, String cover, int minMinutes) {
         this.name = name;
         this.color = color;
         this.channelIds = channelIds;
         this.sourceNames = sourceNames;
         this.cover = cover;
+        this.minMinutes = minMinutes;
     }
 
     public static synchronized List<TvChannel> load(Context context) {
@@ -76,12 +81,14 @@ public final class TvChannel {
 
                 String cover = channel.optString("cover", "");
                 result.add(new TvChannel(channel.getString("name"), color, ids, names,
-                        cover.isEmpty() ? null : "opentube/" + cover));
+                        cover.isEmpty() ? null : "opentube/" + cover, Math.max(0, channel.optInt("minMinutes", 0))));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        android.util.Log.d("OpenTube", "lista de canais: " + (sPushedRoot != null ? "enviada pelo PC (" + sPushedRoot + ")" : "embutida no APK")
+                + ", " + result.size() + " canais");
         sChannels = Collections.unmodifiableList(result);
         return sChannels;
     }
@@ -105,21 +112,44 @@ public final class TvChannel {
         return builder.toString();
     }
 
+    /** Pasta onde estão a lista e as capas enviadas pelo PC, se forem elas que valem. */
+    static java.io.File pushedRoot() {
+        return sPushedRoot;
+    }
+
     /**
-     * A lista enviada pelo PC (curadoria.html, via adb) fica em files/opentube/canais.json
-     * e vale mais que a embutida no APK. Assim dá para atualizar os canais sem recompilar.
+     * A lista enviada pelo PC (curadoria.html, via adb) vale mais que a embutida no APK, para dar
+     * para atualizar os canais sem recompilar. Ela fica na pasta externa do app
+     * (/sdcard/Android/data/app.opentube/files), onde o adb escreve mesmo no APK release.
+     * A pasta interna (files/) é de envios antigos, feitos com run-as no APK debug.
+     * Uma lista enviada antes da última instalação do APK é ignorada: o APK novo já traz a lista atual.
      */
     private static String readList(Context context) throws Exception {
-        java.io.File pushed = new java.io.File(context.getFilesDir(), ASSET_PATH);
-        if (pushed.exists() && pushed.length() > 0) {
+        long installedAt = 0;
+        try {
+            installedAt = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).lastUpdateTime;
+        } catch (Exception e) {
+            // sem a data, qualquer lista enviada vale
+        }
+        java.io.File[] roots = {context.getExternalFilesDir(null), context.getFilesDir()};
+        for (java.io.File root : roots) {
+            if (root == null) {
+                continue;
+            }
+            java.io.File pushed = new java.io.File(root, ASSET_PATH);
+            if (!pushed.exists() || pushed.length() == 0 || pushed.lastModified() < installedAt) {
+                continue;
+            }
             try {
                 String content = read(new java.io.FileInputStream(pushed));
                 new JSONObject(content); // valida antes de usar
+                sPushedRoot = root;
                 return content;
             } catch (Exception e) {
-                e.printStackTrace(); // arquivo enviado com problema: usa o embutido
+                e.printStackTrace(); // arquivo enviado com problema: tenta o próximo
             }
         }
+        sPushedRoot = null;
         return read(context.getAssets().open(ASSET_PATH));
     }
 

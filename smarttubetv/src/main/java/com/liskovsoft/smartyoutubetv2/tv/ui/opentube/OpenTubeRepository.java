@@ -35,6 +35,7 @@ public final class OpenTubeRepository {
 
     private static final long MAX_AGE_MS = 30 * 60 * 1000;
     private static final int MAX_VIDEOS = 50; // limite seguro da fila do SmartTube em aparelhos com pouca RAM
+    private static final int MAX_ENTRIES = 400; // guardados por canal, antes de tirar os vistos e os curtos
     private static OpenTubeRepository sInstance;
 
     private final Context mContext;
@@ -43,7 +44,6 @@ public final class OpenTubeRepository {
     private final Map<String, List<Entry>> mCache = new HashMap<>();
     private final Map<String, Long> mUpdatedAt = new HashMap<>();
     private final Map<String, List<Callback>> mPending = new HashMap<>();
-    private final Map<String, Integer> mNextStart = new HashMap<>();
     private final Map<String, String> mDescriptions = new HashMap<>();
     private boolean mDiskLoaded;
 
@@ -124,7 +124,7 @@ public final class OpenTubeRepository {
     public void load(final TvChannel channel, Callback callback) {
         if (isReady(channel)) {
             if (callback != null) {
-                callback.onResult(toVideos(mCache.get(channel.name)));
+                callback.onResult(toVideos(select(channel, mCache.get(channel.name))));
             }
             if (!isFresh(channel)) {
                 refresh(channel, null);
@@ -165,19 +165,32 @@ public final class OpenTubeRepository {
                 List<Entry> current = mCache.get(channel.name);
                 if (callbacks != null) {
                     for (Callback item : callbacks) {
-                        item.onResult(current != null ? toVideos(current) : null);
+                        item.onResult(current != null ? toVideos(select(channel, current)) : null);
                     }
                 }
             });
         });
     }
 
-    /** Cada vez que o canal é aberto, a programação continua de onde parou, como uma TV. */
-    public int nextStartIndex(TvChannel channel, int size) {
-        Integer start = mNextStart.get(channel.name);
-        int index = start == null || size == 0 ? 0 : start % size;
-        mNextStart.put(channel.name, index + 1);
-        return index;
+    /**
+     * O que vai ao ar: sem os vídeos já vistos e sem os mais curtos que o mínimo do canal.
+     * Se tudo já foi visto, repete a programação (melhor que tela vazia).
+     */
+    private List<Entry> select(TvChannel channel, List<Entry> entries) {
+        OpenTubeHistory history = OpenTubeHistory.instance(mContext);
+        List<Entry> fresh = new ArrayList<>();
+        List<Entry> longEnough = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (history.isTooShort(entry.videoId, channel.minMinutes)) {
+                continue;
+            }
+            longEnough.add(entry);
+            if (!history.isWatched(entry.videoId)) {
+                fresh.add(entry);
+            }
+        }
+        List<Entry> result = fresh.isEmpty() ? longEnough : fresh;
+        return result.size() > MAX_VIDEOS ? result.subList(0, MAX_VIDEOS) : result;
     }
 
     private void remember(List<Entry> entries) {
@@ -216,10 +229,10 @@ public final class OpenTubeRepository {
 
         List<Entry> result = new ArrayList<>();
         boolean added = true;
-        for (int i = 0; added && result.size() < MAX_VIDEOS; i++) {
+        for (int i = 0; added && result.size() < MAX_ENTRIES; i++) {
             added = false;
             for (List<OpenTubeFeed.Entry> list : lists) {
-                if (i < list.size() && result.size() < MAX_VIDEOS) {
+                if (i < list.size() && result.size() < MAX_ENTRIES) {
                     OpenTubeFeed.Entry item = list.get(i);
                     Entry entry = new Entry();
                     entry.videoId = item.videoId;

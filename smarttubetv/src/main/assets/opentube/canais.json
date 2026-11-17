@@ -138,7 +138,8 @@
      "name": "Doma Arquitetura"
     }
    ],
-   "cover": "covers/arch3.png"
+   "cover": "covers/arch3.png",
+   "minMinutes": 5
   },
   {
    "name": "SCIFI",
@@ -312,7 +313,8 @@
      "name": "Chill with Taiki"
     }
    ],
-   "cover": "covers/lofi.png"
+   "cover": "covers/lofi.png",
+   "minMinutes": 20
   },
   {
    "name": "SESSIONS",
@@ -455,7 +457,8 @@
      "name": "Stripped Sessions"
     }
    ],
-   "cover": "covers/sessions.png"
+   "cover": "covers/sessions.png",
+   "minMinutes": 10
   },
   {
    "name": "DSGN",
@@ -558,7 +561,8 @@
      "name": "Design Theory"
     }
    ],
-   "cover": "covers/dsgn.png"
+   "cover": "covers/dsgn.png",
+   "minMinutes": 5
   },
   {
    "name": "Tech no Logic",
@@ -697,7 +701,8 @@
      "name": "Explaining Tech Like You're Five"
     }
    ],
-   "cover": "covers/tech-no-logic.png"
+   "cover": "covers/tech-no-logic.png",
+   "minMinutes": 5
   },
   {
    "name": "POLITIK",
@@ -840,7 +845,8 @@
      "name": "Geopolítica Mundial"
     }
    ],
-   "cover": "covers/politik.png"
+   "cover": "covers/politik.png",
+   "minMinutes": 5
   },
   {
    "name": "NEWS",
@@ -1110,7 +1116,8 @@
      "name": "Unearthed History - Archaeology Documentaries"
     }
    ],
-   "cover": "covers/history.png"
+   "cover": "covers/history.png",
+   "minMinutes": 8
   },
   {
    "name": "Entertainment",
@@ -1253,7 +1260,8 @@
      "name": "Rowan Ellis"
     }
    ],
-   "cover": "covers/entertainment.png"
+   "cover": "covers/entertainment.png",
+   "minMinutes": 5
   },
   {
    "name": "Art",
@@ -1392,7 +1400,8 @@
      "name": "Paintings by Dusan"
     }
    ],
-   "cover": "covers/art.png"
+   "cover": "covers/art.png",
+   "minMinutes": 5
   },
   {
    "name": "Plato TV",
@@ -1535,7 +1544,8 @@
      "name": "Philosophies for Life"
     }
    ],
-   "cover": "covers/plato-tv.png"
+   "cover": "covers/plato-tv.png",
+   "minMinutes": 8
   },
   {
    "name": "Science",
@@ -1682,7 +1692,8 @@
      "name": "Physics Videos by Eugene Khutoryansky"
     }
    ],
-   "cover": "covers/science.png"
+   "cover": "covers/science.png",
+   "minMinutes": 5
   },
   {
    "name": "Cinema",
@@ -1809,7 +1820,8 @@
      "name": "Dalenogare Críticas"
     }
    ],
-   "cover": "covers/cinema.png"
+   "cover": "covers/cinema.png",
+   "minMinutes": 8
   },
   {
    "name": "MUSIC",
@@ -1944,7 +1956,8 @@
      "name": "Cadence Hira"
     }
    ],
-   "cover": "covers/music.png"
+   "cover": "covers/music.png",
+   "minMinutes": 5
   },
   {
    "name": "KIDS",
@@ -2272,7 +2285,8 @@
      "id": "UCTAfm-YD2M9xzvbYvRc5ttA",
      "name": "Timothy Cain"
     }
-   ]
+   ],
+   "minMinutes": 8
   },
   {
    "name": "Esportes",
@@ -2453,7 +2467,8 @@
      "name": "Walk in Brazil"
     }
    ],
-   "cover": "covers/nature.png"
+   "cover": "covers/nature.png",
+   "minMinutes": 10
   }
  ]
 }
