@@ -879,6 +879,21 @@ public class OpenTubeOverlay {
             }
         }
 
+        // Canal com tempo máximo (ex.: LOFI até 2 h): pula lives e vídeos longos, que nunca terminam
+        if (channel != null && channel.maxMinutes > 0 && mFragment.isPlaying()
+                && (video.isLive || duration > channel.maxMinutes * 60_000L)
+                && !video.videoId.equals(mShortSkippedId)) {
+            mShortSkippedId = video.videoId;
+            if (video.isLive) {
+                OpenTubeHistory.instance(mActivity).markLive(video.videoId);
+            }
+            android.util.Log.d("OpenTube", (video.isLive ? "live" : "longo (" + duration / 60_000 + " min)")
+                    + " > " + channel.maxMinutes + " min: pulando");
+            mSuppressSmartTubeUiUntil = SystemClock.uptimeMillis() + SUPPRESS_SMARTTUBE_UI_MS;
+            mFragment.skipToNext();
+            return;
+        }
+
         // Tocando há uns segundos: busca já os dados do próximo, para "Próximo" e a troca automática
         if (mFragment.isPlaying() && mFragment.getPositionMs() > PREFETCH_AFTER_MS
                 && !video.videoId.equals(mPrefetchedAfter)) {

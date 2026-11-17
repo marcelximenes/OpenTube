@@ -190,7 +190,8 @@ public final class OpenTubeRepository {
         List<Entry> fresh = new ArrayList<>();
         List<Entry> longEnough = new ArrayList<>();
         for (Entry entry : entries) {
-            if (history.isTooShort(entry.videoId, channel.minMinutes)) {
+            if (history.isTooShort(entry.videoId, channel.minMinutes)
+                    || history.isTooLong(entry.videoId, channel.maxMinutes)) {
                 continue;
             }
             longEnough.add(entry);

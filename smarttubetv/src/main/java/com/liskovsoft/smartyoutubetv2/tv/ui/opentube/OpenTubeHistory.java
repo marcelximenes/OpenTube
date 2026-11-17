@@ -36,6 +36,8 @@ final class OpenTubeHistory {
     private static final int MAX_ITEMS = 6000;
     private static final long WATCHED_MIN_MS = 5 * 60 * 1000;
     private static final long SAVE_DELAY_MS = 4000;
+    /** Duração gravada para uma live. */
+    private static final int LIVE_SEC = Integer.MAX_VALUE;
 
     private static OpenTubeHistory sInstance;
 
@@ -88,6 +90,23 @@ final class OpenTubeHistory {
         }
         int duration = durationSec(videoId);
         return duration > 0 && duration < minMinutes * 60;
+    }
+
+    /** Longo demais para o canal, ou live (só quando já se sabe). */
+    boolean isTooLong(String videoId, int maxMinutes) {
+        if (maxMinutes <= 0) {
+            return false;
+        }
+        int duration = durationSec(videoId);
+        return duration > maxMinutes * 60;
+    }
+
+    /** Live: guarda como duração "infinita", para sair da programação dos canais com tempo máximo. */
+    synchronized void markLive(String videoId) {
+        if (videoId != null && !Integer.valueOf(LIVE_SEC).equals(mDurations.get(videoId))) {
+            mDurations.put(videoId, LIVE_SEC);
+            scheduleSave();
+        }
     }
 
     /** Chamado pelo player a cada tique: grava a duração e marca como visto quando passar do ponto. */

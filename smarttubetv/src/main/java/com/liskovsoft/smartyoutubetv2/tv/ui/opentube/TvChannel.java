@@ -34,15 +34,18 @@ public final class TvChannel {
     public final String cover;
     /** Tempo mínimo de vídeo, em minutos (0 = sem mínimo). Configurado na curadoria. */
     public final int minMinutes;
+    /** Tempo máximo de vídeo, em minutos (0 = sem máximo). Com máximo, lives também são puladas. */
+    public final int maxMinutes;
 
     private TvChannel(String name, int color, String[] channelIds, String[] sourceNames, String cover, int minMinutes,
-                      java.util.Set<String> favorites) {
+                      int maxMinutes, java.util.Set<String> favorites) {
         this.name = name;
         this.color = color;
         this.channelIds = channelIds;
         this.sourceNames = sourceNames;
         this.cover = cover;
         this.minMinutes = minMinutes;
+        this.maxMinutes = maxMinutes;
         this.favorites = favorites;
     }
 
@@ -89,7 +92,8 @@ public final class TvChannel {
 
                 String cover = channel.optString("cover", "");
                 result.add(new TvChannel(channel.getString("name"), color, ids, names,
-                        cover.isEmpty() ? null : "opentube/" + cover, Math.max(0, channel.optInt("minMinutes", 0)), favorites));
+                        cover.isEmpty() ? null : "opentube/" + cover, Math.max(0, channel.optInt("minMinutes", 0)),
+                        Math.max(0, channel.optInt("maxMinutes", 0)), favorites));
             }
         } catch (Exception e) {
             e.printStackTrace();
